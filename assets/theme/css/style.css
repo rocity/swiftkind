@@ -1,0 +1,1079 @@
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url("../fonts/montseratt/Montserrat-SemiBold.otf");
+}
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url("../fonts/montseratt/Montserrat-Bold.otf");
+}
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("../fonts/montseratt/Montserrat-Light.otf");
+}
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url("../fonts/raleway/Raleway-Light.ttf");
+}
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url("../fonts/raleway/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  src: url("../fonts/raleway/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/open-sans/OpenSans-Light.ttf");
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url("../fonts/open-sans/OpenSans-Semibold.ttf");
+}
+@font-face {
+  font-family: 'OpenSans-LightItalic';
+  src: url("../fonts/open-sans/OpenSans-LightItalic.ttf");
+}
+/* line 38, ../sass/_typography.scss */
+body {
+  font-family: "Raleway-Regular",Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #222;
+}
+
+/* line 2, ../sass/_extends.scss */
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 7, ../sass/_extends.scss */
+.flex > [class^="col-"],
+.flex > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+}
+
+/* line 14, ../sass/_extends.scss */
+.no-padding {
+  padding: 0;
+}
+
+/* line 18, ../sass/_extends.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 22, ../sass/_extends.scss */
+.container-fluid {
+  padding: 0;
+}
+
+/* line 26, ../sass/_extends.scss */
+.align-center {
+  margin: 0 auto !important;
+}
+
+/* line 33, ../sass/_extends.scss */
+.horizontal-slider.slick-dotted,
+.vertical-slider.slick-dotted {
+  margin-bottom: 0;
+}
+
+/* line 40, ../sass/_extends.scss */
+.hvr-grow:hover {
+  box-shadow: 0 0 10px rgba(37, 232, 244, 0.9);
+  border: solid rgba(37, 232, 244, 0.9) 1px;
+}
+
+/* line 47, ../sass/_extends.scss */
+a {
+  color: #40e74c;
+  text-decoration: none;
+}
+/* line 50, ../sass/_extends.scss */
+a:hover {
+  color: #1bd929;
+  text-decoration: none;
+  transition: ease-in 0.1s all;
+}
+
+/* line 59, ../sass/_extends.scss */
+.owl-carousel .owl-prev {
+  float: left;
+}
+/* line 62, ../sass/_extends.scss */
+.owl-carousel .owl-next {
+  float: right;
+}
+/* line 65, ../sass/_extends.scss */
+.owl-carousel .owl-prev,
+.owl-carousel .owl-next {
+  margin-top: -7em;
+}
+/* line 68, ../sass/_extends.scss */
+.owl-carousel .owl-prev img,
+.owl-carousel .owl-next img {
+  width: 1em;
+}
+
+/* line 75, ../sass/_extends.scss */
+.black-pearl {
+  background: #112932;
+  background: -webkit-linear-gradient(to bottom, #263238, #0c2731);
+  background: linear-gradient(to bottom, #263238, #0c2731);
+}
+
+/* line 82, ../sass/_extends.scss */
+.material {
+  position: relative;
+  padding: 0;
+  margin: 1.2em 0;
+  border: none;
+  overflow: visible;
+}
+
+/* line 90, ../sass/_extends.scss */
+.material input, .material textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: #232e33 solid 2px;
+  font-size: 120%;
+  outline: none;
+  cursor: text;
+  background: none;
+}
+
+/* line 104, ../sass/_extends.scss */
+.material textarea {
+  height: 6em;
+  margin-bottom: -5.3px;
+}
+
+/* line 109, ../sass/_extends.scss */
+.material input::-webkit-input-placeholder,
+.material textarea::-webkit-input-placeholder {
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+/* line 115, ../sass/_extends.scss */
+.material input:not(:focus)::-webkit-input-placeholder,
+.material textarea:not(:focus)::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* line 120, ../sass/_extends.scss */
+.material hr {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: #0d1c23;
+  font-size: 1px;
+  will-change: transform, visibility;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  visibility: hidden;
+  z-index: 10;
+}
+
+/* line 142, ../sass/_extends.scss */
+.material input:focus ~ hr,
+.material textarea:focus ~ hr {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  visibility: visible;
+}
+
+/* line 149, ../sass/_extends.scss */
+.material label {
+  position: absolute;
+  top: 10px;
+  color: #e9eaeb;
+  -webkit-transform-origin: 0 -150%;
+  transform-origin: 0 -150%;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  pointer-events: none;
+  font-family: "Raleway-Light";
+}
+
+/* line 163, ../sass/_extends.scss */
+.material input:focus ~ label,
+.material input:valid ~ label,
+.material textarea:focus ~ label,
+.material textarea:valid ~ label {
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+/* line 2, ../sass/_header.scss */
+nav.navbar {
+  margin-bottom: 0;
+  background: #12141a;
+  border-radius: 0;
+  padding: 1em 3em;
+  z-index: 450;
+}
+/* line 9, ../sass/_header.scss */
+nav.navbar a img {
+  width: 150px;
+}
+/* line 13, ../sass/_header.scss */
+nav.navbar .navbar-header {
+  margin-top: 11px;
+}
+/* line 15, ../sass/_header.scss */
+nav.navbar .navbar-header a {
+  text-decoration: none;
+}
+/* line 19, ../sass/_header.scss */
+nav.navbar .nav-links {
+  margin-top: -300px;
+  text-align: center;
+}
+/* line 20, ../sass/_header.scss */
+nav.navbar .nav-links.open {
+  margin-top: 15px;
+  transition: ease 0.5s;
+}
+/* line 26, ../sass/_header.scss */
+nav.navbar .nav-links ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+/* line 30, ../sass/_header.scss */
+nav.navbar .nav-links ul li {
+  padding: 1.5em 0 1.5em 2.5em;
+  display: inline;
+}
+/* line 33, ../sass/_header.scss */
+nav.navbar .nav-links ul li a {
+  color: #787d80;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+/* line 38, ../sass/_header.scss */
+nav.navbar .nav-links ul li a:hover {
+  color: #40e74c;
+}
+/* line 45, ../sass/_header.scss */
+nav.navbar.active {
+  position: fixed;
+  transition: ease-in 0.5s all;
+  width: 100%;
+  background: none;
+  color: #252525;
+  border: none;
+  background: #fff;
+  box-shadow: 0 1px 4px 0 rgba(99, 114, 130, 0.15);
+}
+/* line 54, ../sass/_header.scss */
+nav.navbar.active path {
+  stroke: #252525;
+}
+/* line 57, ../sass/_header.scss */
+nav.navbar.active .contact-trigger {
+  color: #252525;
+}
+/* line 60, ../sass/_header.scss */
+nav.navbar.active .menu {
+  display: none;
+}
+/* line 63, ../sass/_header.scss */
+nav.navbar.active .envelop {
+  stroke: #252525;
+}
+/* line 67, ../sass/_header.scss */
+nav.navbar.active .menu-trigger .logo {
+  display: inline-block;
+  background-image: url(../images/logo-active.png);
+  background-size: cover;
+  width: 100px;
+  height: 30px;
+}
+/* line 80, ../sass/_header.scss */
+nav.navbar.active .nav-links ul li a {
+  color: #252525;
+}
+/* line 87, ../sass/_header.scss */
+nav.navbar .contact-trigger {
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 20px 12px;
+}
+/* line 92, ../sass/_header.scss */
+nav.navbar .menu-trigger {
+  height: 30px;
+}
+/* line 94, ../sass/_header.scss */
+nav.navbar .menu-trigger .logo {
+  display: none;
+}
+/* line 96, ../sass/_header.scss */
+nav.navbar .menu-trigger .logo img {
+  margin-top: -13px;
+  width: 110px;
+}
+/* line 102, ../sass/_header.scss */
+nav.navbar .menu {
+  color: #898989;
+  margin-top: -25px;
+  text-decoration: none;
+  position: absolute;
+  margin-left: 35px;
+  font-size: 12px;
+}
+/* line 110, ../sass/_header.scss */
+nav.navbar .hamburger {
+  display: inline-block;
+}
+/* line 113, ../sass/_header.scss */
+nav.navbar svg {
+  width: 30px;
+  height: 25px;
+}
+/* line 117, ../sass/_header.scss */
+nav.navbar path {
+  fill: none;
+  stroke-width: 2px;
+  stroke: #898989;
+  stroke-dashoffset: 0px;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+}
+/* line 123, ../sass/_header.scss */
+nav.navbar path#top, nav.navbar path#bottom {
+  stroke-dasharray: 20px 52px;
+}
+/* line 127, ../sass/_header.scss */
+nav.navbar path#middle {
+  stroke-dasharray: 20px 20px;
+}
+/* line 132, ../sass/_header.scss */
+nav.navbar .open path#top,
+nav.navbar .open path#bottom {
+  stroke-dashoffset: -50px;
+}
+/* line 136, ../sass/_header.scss */
+nav.navbar .open path#middle {
+  stroke-dashoffset: -10px;
+  stroke-dasharray: 0px 10px;
+}
+
+/* line 145, ../sass/_header.scss */
+.wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 153, ../sass/_header.scss */
+.bg-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* line 162, ../sass/_header.scss */
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  bottom: -160px;
+  -webkit-animation: square 10s infinite;
+  animation: square 10s infinite;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+/* line 176, ../sass/_header.scss */
+.bg-bubbles li:nth-child(1) {
+  left: 10%;
+}
+
+/* line 180, ../sass/_header.scss */
+.bg-bubbles li:nth-child(2) {
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+}
+
+/* line 190, ../sass/_header.scss */
+.bg-bubbles li:nth-child(3) {
+  left: 25%;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+/* line 196, ../sass/_header.scss */
+.bg-bubbles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* line 205, ../sass/_header.scss */
+.bg-bubbles li:nth-child(5) {
+  left: 70%;
+}
+
+/* line 209, ../sass/_header.scss */
+.bg-bubbles li:nth-child(6) {
+  left: 80%;
+  width: 75px;
+  height: 75px;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 218, ../sass/_header.scss */
+.bg-bubbles li:nth-child(7) {
+  left: 32%;
+  width: 16px;
+  height: 16px;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/* line 226, ../sass/_header.scss */
+.bg-bubbles li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+
+/* line 236, ../sass/_header.scss */
+.bg-bubbles li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 25s;
+  animation-duration: 25s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* line 247, ../sass/_header.scss */
+.bg-bubbles li:nth-child(10) {
+  left: 90%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+/* line 277, ../sass/_header.scss */
+.arrow {
+  animation-name: arrow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  margin-top: 3em;
+  animation-timing-function: ease-out;
+}
+/* line 283, ../sass/_header.scss */
+.arrow a {
+  color: #fff;
+}
+
+/* line 291, ../sass/_header.scss */
+#page-wrapper.open .navbar.active {
+  background: #12141a;
+}
+/* line 293, ../sass/_header.scss */
+#page-wrapper.open .navbar.active a {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 297, ../sass/_header.scss */
+#page-wrapper.open .navbar.active .logo {
+  display: inline-block;
+  background-image: url(../images/logo.png);
+  background-size: cover;
+  width: 100px;
+  height: 30px;
+}
+/* line 307, ../sass/_header.scss */
+#page-wrapper.open .navbar.active .hamburger path {
+  stroke: #fff;
+}
+/* line 313, ../sass/_header.scss */
+#page-wrapper.open .right-sidebar {
+  top: 0;
+  display: block;
+  padding: 0 3em;
+}
+/* line 318, ../sass/_header.scss */
+#page-wrapper.open .contact-trigger {
+  opacity: 0;
+  transition: ease 0.5s;
+  cursor: default;
+}
+/* line 324, ../sass/_header.scss */
+#page-wrapper .right-sidebar {
+  display: block;
+  position: fixed;
+  top: -99999px;
+  z-index: 310;
+  width: 100%;
+  height: 100%;
+  background: #12141a;
+  display: none;
+  transition: ease-in all 0.5s;
+}
+/* line 325, ../sass/_header.scss */
+#page-wrapper .right-sidebar .content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #e9eaeb;
+  font-family: "Raleway-Light";
+}
+/* line 331, ../sass/_header.scss */
+#page-wrapper .right-sidebar .content .address,
+#page-wrapper .right-sidebar .content .phone {
+  font-family: "OpenSans-Light";
+}
+/* line 335, ../sass/_header.scss */
+#page-wrapper .right-sidebar .content .contact-heading {
+  font-family: "Montserrat-SemiBold";
+}
+/* line 338, ../sass/_header.scss */
+#page-wrapper .right-sidebar .content .title {
+  letter-spacing: 5px;
+}
+/* line 352, ../sass/_header.scss */
+#page-wrapper .right-sidebar .form-control {
+  height: 50px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  color: #a8adaf;
+  border-bottom: #0d1c23 solid 2px;
+  margin-bottom: 1em;
+}
+
+/* line 1, ../sass/_home.scss */
+#page-wrapper {
+  overflow-x: hidden;
+}
+
+/* line 5, ../sass/_home.scss */
+.masthead {
+  width: 100%;
+  background: #12141a;
+  color: #fff;
+  display: table;
+}
+/* line 10, ../sass/_home.scss */
+.masthead .masthead-content {
+  height: 100vh;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 17, ../sass/_home.scss */
+.masthead .masthead-content .content-text .site-logo img {
+  width: 300px;
+  margin: 0 auto 4em;
+}
+/* line 22, ../sass/_home.scss */
+.masthead .masthead-content .content-text .cta {
+  color: #fff;
+  background: #09182b;
+  padding: 15px 25px;
+  border-radius: 50px;
+  margin-top: 3em;
+  font-size: 1.2em;
+  font-family: "Montserrat-Light";
+  text-decoration: none;
+}
+/* line 31, ../sass/_home.scss */
+.masthead .masthead-content .content-text .cta:hover {
+  background: #071323;
+  transition: 0.3s ease;
+}
+/* line 36, ../sass/_home.scss */
+.masthead .masthead-content .content-text .section-heading {
+  color: #fff;
+  font-family: "Montserrat-Light";
+  width: 55%;
+}
+@media (min-width: 1025px) and (max-width: 1599px) {
+  /* line 36, ../sass/_home.scss */
+  .masthead .masthead-content .content-text .section-heading {
+    width: 70%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* line 36, ../sass/_home.scss */
+  .masthead .masthead-content .content-text .section-heading {
+    width: 75%;
+  }
+}
+/* line 47, ../sass/_home.scss */
+.masthead .masthead-content .content-text .sub-heading {
+  margin: 2em 0;
+}
+@-webkit-keyframes scroll-inner {
+  from {
+    margin-top: 15%;
+  }
+  to {
+    margin-top: 50%;
+  }
+}
+@keyframes scroll-inner {
+  from {
+    margin-top: 15%;
+  }
+  to {
+    margin-top: 50%;
+  }
+}
+@-webkit-keyframes scroll-mouse {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 15px;
+  }
+}
+@keyframes scroll-mouse {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 15px;
+  }
+}
+/* line 83, ../sass/_home.scss */
+.masthead .masthead-content div.mouse-container {
+  position: relative;
+  display: block;
+  height: 100px;
+}
+/* line 88, ../sass/_home.scss */
+.masthead .masthead-content div.mouse {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 30px;
+  height: 50px;
+  border: solid 2px #fff;
+  border-radius: 25px;
+  -webkit-animation: scroll-mouse 1.5s;
+  animation: scroll-mouse 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+/* line 101, ../sass/_home.scss */
+.masthead .masthead-content div.mouse span.scroll-down {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 15% auto auto auto;
+  -webkit-animation: scroll-inner 1.5s;
+  animation: scroll-inner 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+/* line 118, ../sass/_home.scss */
+.section {
+  min-height: 100vh;
+}
+
+/* line 122, ../sass/_home.scss */
+.section-2 {
+  background: #f9f9f9;
+}
+
+/* line 126, ../sass/_home.scss */
+.section-full {
+  height: 100vh;
+  width: 100%;
+}
+
+/* line 131, ../sass/_home.scss */
+.section-heading {
+  font-size: 3.1em;
+  font-family: "Montserrat-Bold";
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #122132;
+}
+
+/* line 139, ../sass/_home.scss */
+.section-sub-heading {
+  color: #40e74c;
+  font-family: "OpenSans-Semibold";
+}
+
+/* line 144, ../sass/_home.scss */
+.section-text {
+  font-size: 1.2em;
+  line-height: 2;
+}
+
+/* line 149, ../sass/_home.scss */
+.bar {
+  display: block;
+  background: #40e74c;
+  width: 3em;
+  height: 0.3em;
+  margin: 1.5em 0 2.5em;
+}
+
+/* line 157, ../sass/_home.scss */
+.section-main-img {
+  width: 100%;
+}
+
+/* line 161, ../sass/_home.scss */
+.section-offer {
+  z-index: 100;
+  background: #1d262a;
+}
+/* line 164, ../sass/_home.scss */
+.section-offer .section-title {
+  position: absolute;
+  margin: 0 auto;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  padding: 5em 0;
+  z-index: 150;
+}
+/* line 172, ../sass/_home.scss */
+.section-offer .section-title .section-heading {
+  color: #fff;
+}
+
+/* line 178, ../sass/_home.scss */
+.section-skills {
+  padding: 5em 0;
+}
+/* line 180, ../sass/_home.scss */
+.section-skills .item {
+  padding: 0 5em;
+}
+/* line 182, ../sass/_home.scss */
+.section-skills .item .item-heading {
+  font-family: "Montserrat-SemiBold";
+  margin: 2em auto;
+}
+/* line 186, ../sass/_home.scss */
+.section-skills .item .item-avatar {
+  border: solid 2px #a6dbee;
+  padding: 3em;
+  border-radius: 7px;
+}
+/* line 191, ../sass/_home.scss */
+.section-skills .item .item-desc {
+  line-height: 1.8;
+}
+
+/* line 196, ../sass/_home.scss */
+.cta-section {
+  padding: 3em 0;
+}
+/* line 198, ../sass/_home.scss */
+.cta-section .cta-btn {
+  padding: 1.2em 2em;
+  display: inline-block;
+  color: #fff;
+  background: #1d262a;
+  font-size: 1.2em;
+  margin: 2em auto;
+  text-decoration: none;
+}
+/* line 206, ../sass/_home.scss */
+.cta-section .cta-btn:hover {
+  text-decoration: none;
+  background: #080b0c;
+  transition: 0.2s;
+}
+
+/* line 213, ../sass/_home.scss */
+.section-team,
+.technologies {
+  display: flex;
+  align-items: center;
+  background: #dbe9fc;
+  padding: 3em 0;
+  min-height: 1;
+  height: auto;
+}
+/* line 221, ../sass/_home.scss */
+.section-team .section-heading,
+.technologies .section-heading {
+  padding-right: 1.5em;
+  margin: 0.5em auto;
+}
+/* line 225, ../sass/_home.scss */
+.section-team .team-list,
+.section-team .tech-list,
+.technologies .team-list,
+.technologies .tech-list {
+  margin-top: 3em;
+}
+/* line 228, ../sass/_home.scss */
+.section-team .team-list .team-member,
+.section-team .tech-list .team-member,
+.technologies .team-list .team-member,
+.technologies .tech-list .team-member {
+  text-align: center;
+  margin: 2em auto;
+  width: 20%;
+  float: left;
+}
+/* line 234, ../sass/_home.scss */
+.section-team .team-list .team-member .member-name,
+.section-team .tech-list .team-member .member-name,
+.technologies .team-list .team-member .member-name,
+.technologies .tech-list .team-member .member-name {
+  font-family: "Raleway-SemiBold";
+  font-size: 14px;
+}
+/* line 238, ../sass/_home.scss */
+.section-team .team-list .team-member .job-title,
+.section-team .tech-list .team-member .job-title,
+.technologies .team-list .team-member .job-title,
+.technologies .tech-list .team-member .job-title {
+  font-size: 12px;
+}
+
+/* line 245, ../sass/_home.scss */
+.section-testimony {
+  padding: 3em;
+}
+/* line 247, ../sass/_home.scss */
+.section-testimony .testimony-content {
+  font-family: "OpenSans-LightItalic";
+  line-height: 1.8;
+  width: 75%;
+  margin: 2em auto;
+}
+/* line 253, ../sass/_home.scss */
+.section-testimony .author {
+  margin-top: 1em;
+  display: inline-block;
+}
+/* line 256, ../sass/_home.scss */
+.section-testimony .author .avatar {
+  display: inline-block;
+  width: 4em;
+  float: left;
+  margin-right: 1em;
+}
+/* line 263, ../sass/_home.scss */
+.section-testimony .author-details {
+  display: inline-block;
+}
+/* line 265, ../sass/_home.scss */
+.section-testimony .author-details .name {
+  font-family: "Raleway-SemiBold";
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* line 276, ../sass/_home.scss */
+.projects {
+  height: auto;
+  background: #f8f8f8;
+  padding: 10em 0;
+  min-height: 1;
+}
+/* line 281, ../sass/_home.scss */
+.projects .project-item {
+  padding-top: 2em;
+  position: relative;
+}
+/* line 285, ../sass/_home.scss */
+.projects .down-item {
+  margin-bottom: 1.5em;
+}
+/* line 288, ../sass/_home.scss */
+.projects .image-container {
+  display: inline-block;
+  position: relative;
+  width: 360px;
+  height: 234px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+  border: solid 2px #f8f8f8;
+  transition: border ease-in 0.2s, background ease-in 0.2s;
+}
+/* line 299, ../sass/_home.scss */
+.projects .image {
+  width: 360px;
+  height: 234px;
+  z-index: 1;
+  transition: all .5s;
+}
+/* line 305, ../sass/_home.scss */
+.projects .image img {
+  max-width: 100%;
+}
+/* line 308, ../sass/_home.scss */
+.projects .caption {
+  width: 360px;
+  height: 234px;
+  height: 0;
+  z-index: 2;
+  font-weight: 300;
+  transition: all .5s;
+  color: #1d262a;
+}
+/* line 317, ../sass/_home.scss */
+.projects .caption-num2 {
+  transform: translateY(100px);
+}
+/* line 319, ../sass/_home.scss */
+.projects .caption-num2 .title {
+  font-family: "Montserrat-SemiBold";
+}
+/* line 322, ../sass/_home.scss */
+.projects .caption-num2 .bar {
+  margin: 0 auto;
+  background: #92a9b4;
+  height: 1px;
+}
+/* line 327, ../sass/_home.scss */
+.projects .caption-num2 .list {
+  height: 0;
+  list-style: none;
+  padding: 0;
+}
+/* line 331, ../sass/_home.scss */
+.projects .caption-num2 .list li {
+  margin: 0.5em 0;
+  font-size: 0.9em;
+  font-family: "OpenSans-Light";
+}
+/* line 338, ../sass/_home.scss */
+.projects .image-container-num2:hover {
+  border: solid 2px #40e74c;
+}
+/* line 341, ../sass/_home.scss */
+.projects .image-container-num2:hover .image-num2 {
+  opacity: .8;
+  transform: translateY(-10%) translateY(-100%);
+}
+/* line 345, ../sass/_home.scss */
+.projects .image-container-num2:hover .caption-num2 {
+  transform: translateY(-220px);
+}
+/* line 347, ../sass/_home.scss */
+.projects .image-container-num2:hover .caption-num2 .title {
+  margin: 1em 0;
+}
+/* line 350, ../sass/_home.scss */
+.projects .image-container-num2:hover .caption-num2 .list {
+  margin-top: 15px;
+}
+/* line 353, ../sass/_home.scss */
+.projects .image-container-num2:hover .caption-num2 .project-link {
+  position: absolute;
+  right: 15px;
+  padding: 1px 16px;
+  font-size: 1.2em;
+  color: #475d66;
+  top: -15px;
+}
+/* line 362, ../sass/_home.scss */
+.projects .view-project {
+  background: #09182b;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Montserrat-SemiBold";
+  display: inline-block;
+}
+
+/* line 373, ../sass/_home.scss */
+.technologies {
+  padding: 3em 0;
+  background: #e7f5fa;
+}
+/* line 377, ../sass/_home.scss */
+.technologies .tech-list .tech-item {
+  width: 16.66%;
+  text-align: center;
+  margin: 2em auto;
+  float: left;
+  padding: 3em;
+}
+
+/* line 387, ../sass/_home.scss */
+footer {
+  padding: 1em 0 0.5em;
+  background: #e8e8e8;
+  font-family: "OpenSans-Semibold";
+  color: #999;
+}

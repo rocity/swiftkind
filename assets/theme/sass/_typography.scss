@@ -1,0 +1,43 @@
+@font-face{
+	font-family: 'Montserrat-SemiBold';
+	src: url('../fonts/montseratt/Montserrat-SemiBold.otf');
+}
+@font-face{
+	font-family: 'Montserrat-Bold';
+	src: url('../fonts/montseratt/Montserrat-Bold.otf');
+}
+@font-face{
+	font-family: 'Montserrat-Light';
+	src: url('../fonts/montseratt/Montserrat-Light.otf');
+}
+@font-face{
+	font-family: 'Raleway-Light';
+	src: url('../fonts/raleway/Raleway-Light.ttf');
+}
+@font-face{
+	font-family: 'Raleway-Regular';
+	src: url('../fonts/raleway/Raleway-Regular.ttf');
+}
+@font-face{
+	font-family: 'Raleway-SemiBold';
+	src: url('../fonts/raleway/Raleway-SemiBold.ttf');
+}
+@font-face{
+	font-family: 'OpenSans-Light';
+	src: url('../fonts/open-sans/OpenSans-Light.ttf');
+}
+@font-face{
+	font-family: 'OpenSans-Semibold';
+	src: url('../fonts/open-sans/OpenSans-Semibold.ttf');
+}
+@font-face{
+	font-family: 'OpenSans-LightItalic';
+	src: url('../fonts/open-sans/OpenSans-LightItalic.ttf');
+}
+
+body{
+	font-family: "Raleway-Regular",Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #222;
+}

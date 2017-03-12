@@ -1,0 +1,83 @@
+$phone-width: 320px;
+$ip5-width: 568px;
+$tablet-width: 768px;
+$tablet-lg: 875px;
+$desktop-width: 1025px;
+$desktop-lg-width:1600px;
+$desktop-xlg-width:1800px;
+
+
+@mixin mobile-xs {
+    @media (max-width: #{$phone-width})  {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+@mixin mobile-ls {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px})   and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin iphone5-ls {
+    @media (min-width: #{$phone-width}) and (max-width: #{$ip5-width })   and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+        @content;
+    }
+}
+@mixin iphone5-vr {
+    @media (min-width: #{$phone-width}) and (max-width: #{$ip5-width })   and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+        @content;
+    }
+}
+@mixin mobile-vr {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px})   and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+@mixin tablet-vr {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){
+        @content;
+    }
+} 
+
+@mixin tablet-ls {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-lg-width - 1px}){
+        @content;
+    }
+}
+
+
+
+@mixin desktop-lg {
+    @media (min-width: #{$desktop-lg-width}) and (max-width: #{$desktop-xlg-width}){
+        @content;
+    }
+}
+
+@mixin desktop-xlg {
+    @media (min-width: #{$desktop-xlg-width}) {
+        @content;
+    }
+}
