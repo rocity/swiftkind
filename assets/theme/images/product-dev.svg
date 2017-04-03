@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="871" height="871" viewBox="0 0 871 871">
+  <defs>
+    <style>
+      .sk-animate{
+          animation-iteration-count:infinite;
+          animation-timing-function: ease-in;
+          animation-fill-mode: both;
+          -webkit-animation-fill-mode: both;
+      }
+      .diamond1{
+          animation: diamond1 25s infinite;
+         
+      }
+      .diamond2{
+          animation: diamond2 25s infinite;
+      }
+
+      @keyframes diamond1{
+          0{
+              transform: translateY(0);
+          }
+          10%{
+              transform: translateY(-250px);
+          }
+          80%{
+              transform: translateY(-70px);
+          }
+          100%{
+              transform: translateY(-0px);
+          }
+
+      }
+      @keyframes diamond2{
+          0{
+              transform: translateY(0);
+          }
+          10%{
+              transform: translateY(-150px);
+          }
+          80%{
+              transform: translateY(-60px);
+          }
+          100%{
+              transform: translateY(0px);
+          }
+
+
+      }
+      .cls-1 {
+        stroke: #f0f567;
+        stroke-width: 21px;
+        fill: none;
+      }
+      .diamond3{
+        fill:none;
+      }
+
+
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #f0f567;
+      }
+    </style>
+  </defs>
+  <path stroke="#f0f567" stroke-width="21px"   d="M462.170,247.876 L757.169,542.854 C762.245,547.929 762.245,556.157 757.169,561.232 L462.170,856.210 C457.094,861.285 448.865,861.285 443.790,856.210 L148.790,561.232 C143.715,556.157 143.715,547.929 148.790,542.854 L443.790,247.876 C448.865,242.801 457.094,242.801 462.170,247.876 Z" class="diamond3 sk-animate"/>
+  <path d="M462.170,239.486 L757.169,534.463 C762.245,539.538 762.245,547.767 757.169,552.842 L462.170,847.820 C457.094,852.895 448.865,852.895 443.790,847.820 L148.790,552.842 C143.715,547.767 143.715,539.538 148.790,534.463 L443.790,239.486 C448.865,234.410 457.094,234.410 462.170,239.486 Z" class="cls-1 diamond2 sk-animate"/>
+  <path d="M461.265,270.408 L726.579,535.685 C731.144,540.250 731.144,547.650 726.579,552.214 L461.265,817.491 C456.700,822.055 449.299,822.055 444.735,817.491 L179.421,552.214 C174.856,547.650 174.856,540.250 179.421,535.685 L444.735,270.408 C449.299,265.844 456.700,265.844 461.265,270.408 Z" class="cls-2 diamond1 sk-animate"/>
+</svg>

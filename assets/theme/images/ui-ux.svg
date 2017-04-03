@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="871" height="871" viewBox="0 0 871 871">
+  <defs>
+    <style>
+      .sk-animate{
+        animation-iteration-count:infinite;
+        animation-timing-function: ease-in;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+      }
+      .cls-1, .cls-2 {
+        stroke: #40e74c;
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke-width: 29px;
+      }
+
+      .cls-2 {
+        stroke-width: 21px;
+      }
+
+      .cls-2, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #40e74c;
+      }
+
+      }
+    </style>
+  </defs>
+  <rect x="18" y="6" width="330.938" height="857" rx="10" ry="10" class="cls-1"/>
+  <path d="M853.774,234.451 L854.000,234.451 L854.000,863.000 L451.436,863.000 L451.436,267.792 L451.436,234.451 L451.436,233.216 L644.074,65.274 L854.000,227.000 L853.774,234.451 Z" class="cls-2"/>
+  <rect x="18" y="110" width="165" height="21" rx="10" ry="10" class="cls-3 sk-animate"/>
+  <path d="M28.000,239.000 L91.069,239.000 C96.592,239.000 101.069,243.477 101.069,249.000 L101.069,250.000 C101.069,255.523 96.592,260.000 91.069,260.000 L28.000,260.000 C22.477,260.000 18.000,255.523 18.000,250.000 L18.000,249.000 C18.000,243.477 22.477,239.000 28.000,239.000 Z" class="cls-4"/>
+  <rect x="18" y="368" width="165" height="21" rx="10" ry="10" class="cls-3 sk-animate"/>
+  <rect x="18" y="626" width="165" height="21" rx="10" ry="10" class="cls-3 sk-animate"/>
+  <path d="M28.000,497.000 L91.069,497.000 C96.592,497.000 101.069,501.477 101.069,507.000 L101.069,508.000 C101.069,513.523 96.592,518.000 91.069,518.000 L28.000,518.000 C22.477,518.000 18.000,513.523 18.000,508.000 L18.000,507.000 C18.000,501.477 22.477,497.000 28.000,497.000 Z" class="cls-4"/>
+  <path d="M28.000,749.000 L91.069,749.000 C96.592,749.000 101.069,753.477 101.069,759.000 L101.069,760.000 C101.069,765.523 96.592,770.000 91.069,770.000 L28.000,770.000 C22.477,770.000 18.000,765.523 18.000,760.000 L18.000,759.000 C18.000,753.477 22.477,749.000 28.000,749.000 Z" class="cls-4"/>
+  <rect x="456" y="237" width="388" height="23" class="cls-3 sk-animate"/>
+  <path d="M454.000,250.000 L849.000,248.000 L851.000,238.000 L643.000,75.000 L461.000,232.000 L454.000,250.000 Z" class="cls-4"/>
+  <rect x="639" y="238" width="23" height="625" class="cls-3 sk-animate"/>
+</svg>

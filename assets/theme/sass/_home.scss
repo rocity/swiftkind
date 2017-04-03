@@ -1,22 +1,35 @@
 #page-wrapper {
-    overflow-x: hidden;
+    background: #12141a;
+}
+
+#canvas1 {
+    width: 100%!important;
+    height: 100vh;
+    position: fixed;
+    top: 0;
 }
 
 .masthead {
     width: 100%;
     background: #12141a;
     color: $white;
-    display: table;
+    padding-top: 6em;
+    @include mobile {
+        padding-top: 3em;
+    }
+    @include desktop-lg{
+        padding-top: 10em;
+    }
     .masthead-content {
-        height: 100vh;
         width: 100%;
-        display: table-cell;
-        vertical-align: middle;
         .content-text {
             .site-logo {
                 img {
-                    width: 300px;
-                    margin: 0 auto 4em;
+                    width: 150px;
+                    margin: 4em auto 4em;
+                    @include mobile {
+                        width: 100px;
+                    }
                 }
             }
             .cta {
@@ -35,13 +48,18 @@
             }
             .section-heading {
                 color: $white;
-                font-family: $Montserrat-Light;
+                font-family: $OpenSans-Light;
                 width: 55%;
+                font-size: 35px;
                 @include desktop {
                     width: 70%;
                 }
                 @include tablet {
                     width: 75%;
+                }
+                @include mobile {
+                    width: 100%;
+                    font-size: 20px;
                 }
             }
             .sub-heading {
@@ -100,10 +118,10 @@
         }
         div.mouse span.scroll-down {
             display: block;
-            width: 10px;
+            width: 4px;
             height: 10px;
             background: #fff;
-            border-radius: 50%;
+            border-radius: 2px;
             margin: 15% auto auto auto;
             -webkit-animation: scroll-inner 1.5s;
             animation: scroll-inner 1.5s;
@@ -113,6 +131,23 @@
             animation-timing-function: ease;
         }
     }
+}
+
+.nav-logo {
+    display: none;
+}
+
+.right-column {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+}
+
+.main-column {
+    overflow-y: auto;
+    width: 80%;
 }
 
 .section {
@@ -129,26 +164,41 @@
 }
 
 .section-heading {
-    font-size: 3.1em;
-    font-family: $Montserrat-Bold;
+    font-size: 300%;
+    font-family: $Raleway-Light;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    color: #122132;
+    line-height: 1.4;
+    color: $white;
+    @include mobile {
+        font-size: 200%;
+    }
+}
+
+.nav-stacked {
+    position: fixed;
+    top: 20%;
 }
 
 .section-sub-heading {
-    color: $primary-green;
+    color: #0d8040;
     font-family: $OpenSans-Semibold;
 }
 
 .section-text {
     font-size: 1.2em;
     line-height: 2;
+    color: $white;
+    letter-spacing: 0.5px;
+    font-family: "HelveticaNeue Thin", Arial, sans-serif;
+    @include mobile {
+        line-height: 1.6;
+    }
 }
 
 .bar {
     display: block;
-    background: $primary-green;
+    background: #0d8040;
     width: 3em;
     height: 0.3em;
     margin: 1.5em 0 2.5em;
@@ -158,44 +208,175 @@
     width: 100%;
 }
 
+.user-centered {
+    background: #244144;
+    width: 100%;
+    position: relative;
+    padding: 4em;
+    display: inline-flex;
+    align-items: baseline;
+    @include mobile {
+        padding: 2em;
+    }
+    @include tablet {
+        padding: 2em;
+    }
+    &.user-2{
+        background:#1b9a7d;
+    }
+    .image {}
+    .img-1 {
+        width: 40%;
+        z-index: 3;
+        margin-left: -4em;
+        @include mobile {
+            width: 100%;
+            margin: 0;
+        }
+        @include tablet {
+            margin-left: -2em;
+        }
+    }
+    .img-2 {
+        width: 35%;
+        z-index: 2;
+        @include mobile {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    .img-3 {
+        width: 25%;
+        z-index: 1;
+        margin-right: -3em;
+        margin-left: 4em;
+        @include mobile {
+            width: 60%;
+            margin: 0;
+        }
+        @include tablet {
+            margin-right: -1em;
+            margin-left: 2em;
+        }
+    }
+}
+
+.section-about {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .section-heading {
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+    .description {
+        font-size: 25px;
+        font-family: "HelveticaNeue Thin", Arial, sans-serif;
+        color: $white;
+        letter-spacing: 0.5px;
+        line-height: 40px;
+        @include mobile {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+    .about-link {
+        display: inline-flex;
+        right: 0;
+        height: 3em;
+        .ion-ios-arrow-thin-right {
+            font-size: 30px;
+        }
+    }
+    .portfolio {
+        position: absolute;
+        right: 0;
+        @include mobile {
+            bottom: 3em;
+            left: 0;
+            right: 0;
+        }
+        ul {
+            list-style: none;
+            li {
+                transform: rotate(90deg);
+                padding: 3em;
+                @include mobile {
+                    transform: none;
+                    float: left;
+                    padding: 0 0.75em;
+                }
+                &:first-child {
+                    @include mobile {
+                        padding-left: 0;
+                    }
+                }
+                a {
+                    color: #aaa;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    font-size: 0.9em;
+                    &:hover {
+                        color: $primary-green;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .section-offer {
     z-index: 100;
-    background: #1d262a;
-    .section-title {
-        position: absolute;
-        margin: 0 auto;
-        z-index: 3;
-        left: 0;
-        right: 0;
-        padding: 5em 0;
-        z-index: 150;
-        .section-heading {
-            color: $white;
+    background: #181b23;
+    padding-top: 3em;
+    .section-heading {
+        color: $white;
+        font-size: 2em;
+    }
+    .item {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        padding: 0 3em;
+        .icon {
+            img {
+                width: 3em;
+            }
         }
     }
 }
 
 .section-skills {
     padding: 5em 0;
+    background: #12141a;
+    z-index: 10;
     .item {
         padding: 0 5em;
+        @include tablet {
+            padding: 0 1em;
+        }
         .item-heading {
             font-family: $Montserrat-SemiBold;
             margin: 2em auto;
+            color: $white;
         }
         .item-avatar {
-            border: solid 2px #a6dbee;
             padding: 3em;
             border-radius: 7px;
         }
         .item-desc {
             line-height: 1.8;
+            color: $white;
+            letter-spacing: 0.5px;
         }
     }
 }
-.cta-section{
+
+.cta-section {
     padding: 3em 0;
-    .cta-btn{
+    color: $white;
+    .cta-btn {
         padding: 1.2em 2em;
         display: inline-block;
         color: $white;
@@ -203,40 +384,79 @@
         font-size: 1.2em;
         margin: 2em auto;
         text-decoration: none;
-        &:hover{
+        z-index: 999;
+        position: absolute;
+        &:hover {
             text-decoration: none;
             background: darken($dark-grey, 10%);
             transition: 0.2s;
         }
     }
 }
+#technologies{
+    padding-top: 6em;
+}
 .section-team,
 .technologies {
+    padding: 6em 0;
     display: flex;
     align-items: center;
-    background: #dbe9fc;
-    padding: 3em 0;
+    background: #181b23;
     min-height: 1;
     height: auto;
+    z-index: 10;
     .section-heading {
         padding-right: 1.5em;
         margin: 0.5em auto;
+        @include mobile {
+            padding: 0;
+        }
+    }
+    .team-lg {
+        @include mobile {
+            display: none;
+        }
+        @include tablet{
+            display: none;
+        }
+
+    }
+    #team-xs {
+        width: 100vw;
     }
     .team-list,
     .tech-list {
         margin-top: 3em;
-        .team-member,
-        {
-            text-align: center;
-            margin: 2em auto;
-            width: 20%;
-            float: left;
-            .member-name {
-                font-family: $Raleway-SemiBold;
-                font-size: 14px;
+        .team-member {
+            margin-top: 2em;
+            background: #000;
+            .name {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                opacity: 0;
+                color: $white;
+                p {
+                    font-family: $OpenSans-Light;
+                }
+                h3 {
+                    @include mobile {
+                        font-size: 20px;
+                    }
+                }
             }
-            .job-title {
-                font-size: 12px;
+            &:hover {
+                img {
+                    transition: ease-in 0.3s all;
+                    opacity: 0.4;
+                }
+                .name {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -249,15 +469,41 @@
         line-height: 1.8;
         width: 75%;
         margin: 2em auto;
+        color: $white;
+        @include mobile {
+            width: 100%;
+        }
     }
     .author {
         margin-top: 1em;
         display: inline-block;
+        position: relative;
+        @include mobile {
+            width: 100%;
+            padding-left: 3em;
+        }
         .avatar {
             display: inline-block;
             width: 4em;
-            float: left;
+            float: none;
             margin-right: 1em;
+            position: absolute;
+            right: 5em;
+            @include mobile {
+                right: 9em;
+            }
+            .photo {
+                position: absolute;
+                width: 3.5em;
+                height: 3.5em;
+                background-size: cover;
+                margin-right: 1em;
+                @include mobile {
+                    margin-right: 16px;
+                    width: 3em;
+                    height: 3em;
+                }
+            }
         }
     }
     .author-details {
@@ -266,8 +512,10 @@
             font-family: $Raleway-SemiBold;
             font-size: 16px;
             margin-bottom: 5px;
+            color: $white;
         }
         .company {
+            color: $white;
             .company-logo {}
         }
     }
@@ -275,7 +523,6 @@
 
 .projects {
     height: auto;
-    background: #f8f8f8;
     padding: 10em 0;
     min-height: 1;
     .project-item {
@@ -285,37 +532,89 @@
     .down-item {
         margin-bottom: 1.5em;
     }
+    .up-item {
+        margin-bottom: 1.5em;
+    }
     .image-container {
         display: inline-block;
         position: relative;
-        width: 360px;
-        height: 234px;
+        width: 300px;
+        height: 194px;
         overflow: hidden;
         background: $white;
         cursor: pointer;
-        border: solid 2px #f8f8f8;
+        border: none;
         transition: border ease-in 0.2s, background ease-in 0.2s;
+        @include mobile {
+            width: 290px;
+            height: 184px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include desktop-lg {
+            width: 360px;
+            height: 234px;
+        }
+        @include tablet {
+            width: 340px;
+            height: 222px;
+        }
+        @include desktop{
+             width: 300px;
+        height: 194px;
+        }
     }
     .image {
-        width: 360px;
-        height: 234px;
+        width: 290px;
+        height: 184px;
         z-index: 1;
         transition: all .5s;
+        @include mobile {
+            width: 300px;
+            height: 194px
+        }
+        @include desktop-lg {
+            width: 360px;
+            height: 234px;
+        }
+        @include tablet {
+            width: 340px;
+            height: 222px;
+        }
+        @include desktop{
+             width: 300px;
+        height: 194px;
+        }
     }
     .image img {
         max-width: 100%;
     }
     .caption {
-        width: 360px;
-        height: 234px;
+        width: 300px;
+        height: 194px;
         height: 0;
         z-index: 2;
         font-weight: 300;
         transition: all .5s;
         color: $dark-grey;
+        @include mobile {
+            width: 290px;
+            height: 184px
+        }
+        @include desktop-lg {
+            width: 360px;
+            height: 234px;
+        }
+        @include desktop{
+             width: 300px;
+        height: 194px;
+        }
     }
     .caption-num2 {
         transform: translateY(100px);
+        @include mobile {
+            transform: translateY(20px);
+        }
         .title {
             font-family: $Montserrat-SemiBold;
         }
@@ -325,6 +624,9 @@
             height: 1px;
         }
         .list {
+            @include mobile {
+                opacity: 0;
+            }
             height: 0;
             list-style: none;
             padding: 0;
@@ -335,20 +637,26 @@
             }
         }
     }
-    .image-container-num2:hover {
-        border: solid 2px $primary-green;
-    }
     .image-container-num2:hover .image-num2 {
         opacity: .8;
         transform: translateY(-10%) translateY(-100%);
     }
     .image-container-num2:hover .caption-num2 {
-        transform: translateY(-220px);
+        transform: translateY(-192px);
+        @include desktop-lg {
+            transform: translateY(-220px);
+        }
+        @include tablet{
+            transform: translateY(-202px);
+        }
         .title {
             margin: 1em 0;
         }
         .list {
             margin-top: 15px;
+            @include mobile {
+                opacity: 1;
+            }
         }
         .project-link {
             position: absolute;
@@ -372,7 +680,6 @@
 
 .technologies {
     padding: 3em 0;
-    background: #e7f5fa;
     .tech-list {
         .tech-item {
             width: 16.66%;
@@ -380,13 +687,32 @@
             margin: 2em auto;
             float: left;
             padding: 3em;
+            @include tablet {
+                padding: 2em;
+            }
+            @include mobile {
+                width: 25%;
+                padding: 1em;
+            }
         }
     }
 }
 
-footer{
+.contact-xs {
+    background: #181b23;
+    color: $white;
+}
+
+footer {
     padding: 1em 0 0.5em;
-    background:#e8e8e8;
+    background: #181b23;
     font-family: $OpenSans-Semibold;
     color: #999;
+}
+
+.object-hover {
+    transition: ease-in-out 0.5s;
+    &:hover {
+        transform: translate3d(2%, -2%, 0);
+    }
 }

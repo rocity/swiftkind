@@ -1,43 +1,122 @@
-@font-face{
-	font-family: 'Montserrat-SemiBold';
-	src: url('../fonts/montseratt/Montserrat-SemiBold.otf');
-}
-@font-face{
-	font-family: 'Montserrat-Bold';
-	src: url('../fonts/montseratt/Montserrat-Bold.otf');
-}
-@font-face{
-	font-family: 'Montserrat-Light';
-	src: url('../fonts/montseratt/Montserrat-Light.otf');
-}
-@font-face{
-	font-family: 'Raleway-Light';
-	src: url('../fonts/raleway/Raleway-Light.ttf');
-}
-@font-face{
-	font-family: 'Raleway-Regular';
-	src: url('../fonts/raleway/Raleway-Regular.ttf');
-}
-@font-face{
-	font-family: 'Raleway-SemiBold';
-	src: url('../fonts/raleway/Raleway-SemiBold.ttf');
-}
-@font-face{
-	font-family: 'OpenSans-Light';
-	src: url('../fonts/open-sans/OpenSans-Light.ttf');
-}
-@font-face{
-	font-family: 'OpenSans-Semibold';
-	src: url('../fonts/open-sans/OpenSans-Semibold.ttf');
-}
-@font-face{
-	font-family: 'OpenSans-LightItalic';
-	src: url('../fonts/open-sans/OpenSans-LightItalic.ttf');
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../fonts/montseratt/Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
 }
 
-body{
-	font-family: "Raleway-Regular",Helvetica Neue, Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/montseratt/Montserrat-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/montseratt/Montserrat-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-Light';
+    src: url('../fonts/raleway/Raleway-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-Thin';
+    src: url('../fonts/raleway/Raleway-Thin.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-Regular';
+    src: url('../fonts/raleway/Raleway-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-SemiBold';
+    src: url('../fonts/raleway/Raleway-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../fonts/open-sans/OpenSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Semibold';
+    src: url('../fonts/open-sans/OpenSans-Semibold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-LightItalic';
+    src: url('../fonts/open-sans/OpenSans-LightItalic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura-Std-Medium';
+    src: url('../fonts/futura/Futura-Std-Medium.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Thin';
+    src: url('../fonts/HelveticaNeue/HelveticaNeue-Thin.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaneuecyr-light';
+    src: url('../fonts/HelveticaNeue/helveticaneuecyr-light.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'helveticaneuecyr-thin';
+//     src: url('../fonts/HelveticaNeue/helveticaneuecyr-thin.woff2') format("woff2"), url('../fonts/HelveticaNeue/helveticaneuecyr-thin.woff') format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+//     -webkit-font-smoothing: antialiased;
+// }
+
+@font-face {
+  font-family: "HelveticaNeue Thin";
+  src: url("../fonts/HelveticaNeue/helveticaneuecyr-thin.woff2") format("woff2"), url("../fonts/HelveticaNeue/helveticaneuecyr-thin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: "HelveticaNeue Thin", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #222;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }

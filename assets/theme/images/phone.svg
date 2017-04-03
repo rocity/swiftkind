@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="204" height="301" viewBox="0 0 204 301">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #2980b9;
+        stroke-width: 10px;
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #2980b9;
+      }
+
+      .cls-3 {
+        fill: #222;
+      }
+    </style>
+  </defs>
+  <rect x="15" y="8" width="173" height="54" class="cls-1"/>
+  <rect x="80" y="29" width="43" height="13" class="cls-2"/>
+  <rect x="15" y="239" width="173" height="54" class="cls-1"/>
+  <rect x="80" y="260" width="43" height="13" class="cls-2"/>
+  <rect x="179" y="82" width="10" height="157" class="cls-2"/>
+  <rect x="14" y="82" width="10" height="157" class="cls-2"/>
+  <rect x="479" y="41" width="8" height="4" class="cls-3"/>
+</svg>

@@ -3,610 +3,923 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Swiftkind - Python/AngularJS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Swiftkind - Python/AngularJS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <base href="/">
+  <base href="/">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'theme/css/ionicons.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/vertical-slider/css/slick-theme.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/owl-carousel/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/animate/css/animate.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/fullPage.js-master/css/jquery.fullpage.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/hover/css/hover.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'theme/css/bootstrap.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'theme/css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/css/ionicons.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/owl-carousel/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/owl-carousel/css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/animate/css/animate.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/hover/css/hover.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/css/bootstrap.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/css/style.css' %}">
 </head>
 
 <body ng-app="swiftkind" id="page-wrapper">
-    <div id="fullpage">
-        <div class="">
-            <div class="content-wrapper">
-            <!-- NAVBAR SECTION  -->
-                <nav class="navbar"  >
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                           <a href="javascript:;" class="menu-trigger">
-                            <div class="hamburger">
-                                <svg viewBox="161.5 76.5 30 23">
-                                    <g>
-                                        <path id="top" d="M162.5,80.5c0,0,17.083,0,18.621,0c15.378,0,7.689,24.774-1.538,15.547c-6.151-6.152-17-17-17-17"/>
-                                        <path id="middle" d="M162.5,88h19"/>
-                                        <path id="bottom" d="M162.5,95.5c0,0,17.083,0,18.621,0c15.378,0,7.689-24.44-1.538-15.213
-                                        c-6.151,6.151-17,16.833-17,16.833"/>
-                                    </g>
-                                </svg>
-                            </div>
+  <div class="content-wrapper">
+    <!-- NAVBAR SECTION  -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="javascript:;" class="menu-trigger">
+            <div class="hamburger">
+              <svg viewBox="161.5 76.5 30 23">
+                <g>
+                  <path id="top" d="M162.5,80.5c0,0,17.083,0,18.621,0c15.378,0,7.689,24.774-1.538,15.547c-6.151-6.152-17-17-17-17" />
+                  <path id="middle" d="M162.5,88h19" />
+                  <path id="bottom" d="M162.5,95.5c0,0,17.083,0,18.621,0c15.378,0,7.689-24.44-1.538-15.213
+                c-6.151,6.151-17,16.833-17,16.833" />
+                </g>
+              </svg>
+            </div>
+            <!-- <span class="menu">MENU</span> <span class="logo"></span></a> -->
+          </a>
+          <a href="#home" class="text-logo" >Swiftkind</a>
+            <div class="pull-right">
+              <a href="javascript:;" class="contact-trigger">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="276.667px" height="179.999px" viewBox="0 0 276.667 179.999" enable-background="new 0 0 276.667 179.999" xml:space="preserve">
+                  <defs>
+                    <style>
+                      svg:hover .envelop {
+                        stroke: #40e74c;
+                        transition: 0.5s;
+                      }
+                    </style>
+                  </defs>
+                  <g>
+                    <rect x="16.333" y="19" fill="none" stroke="#fff" stroke-width="10" stroke-miterlimit="10" width="246" height="144" class="envelop" />
+                    <polyline fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="47,48.333 139.333,91 227,48.333 " class="envelop" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </a>
+        </div>
+              
+        <div class="text-center">
+          <div class="nav-logo">
+            <img src="{% static 'theme/images/logo-icon.png' %}" class="img-responsive align-center ">
+          </div>
+        </div>
+              
+        <div class="nav-links slideInDown ">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="http://blog.swiftkind.com/" target="_blank">Blogs</a></li>
+            <li><a href="#projects">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="navbar-right pull-right"></div>
+      </div>
+    </nav>
 
-                           <span class="menu">MENU</span> <span class="logo"></span></a>
-                           
-                        </div>
-                        <div class="pull-right">
-                                 <a href="javascript:;" class="navbar-brand contact-trigger"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 width="276.667px" height="179.999px" viewBox="0 0 276.667 179.999" enable-background="new 0 0 276.667 179.999"
-                                 xml:space="preserve">
-                                 <defs>
-                                    <style>
-                                        svg:hover .envelop{
-                                            stroke: #40e74c;
-                                            transition: 0.5s;
-                                        }
-                                    </style>
-                                 </defs>
-                                 <g >
-                                    <rect x="16.333" y="19" fill="none" stroke="#fff" stroke-width="10" stroke-miterlimit="10" width="246" height="144" class="envelop" />
-                                    <polyline fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="47,48.333 
-                                139.333,91 227,48.333 " class="envelop"/>
-                                 </g>
-                            </svg></a>
-                            </div>
-                        <div class="nav-links slideInDown ">
-                                <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Technologies</a></li>
-                                    <li><a href="#">Blogs</a></li>
-                                    <li><a href="#">Portfolio</a></li>
-                                  
-                                </ul>
-                            </div>
-                            
-                        <div class="navbar-right pull-right">
-                            
-                        </div>
-                    </div>
-                </nav>
-            <!-- NAVBAR SECTION  -->
-                <div class="masthead section">
-                    <div class="masthead-content container">
-                        <div class="content-text text-center">
+    <!-- NAVBAR SECTION  -->
+    <div class="masthead section" id="home">
+      <div class="masthead-content container">
+        <div class="content-text text-center">
+          <a href="#" class="site-logo"><img src="{% static 'theme/images/logo1.svg' %}" class="img-responsive"></a>
+          <h1 class="section-heading align-center wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">In every code we solve problems</h1>
+          <div class="scroll-down">
+            <p>scroll down</p>
+          </div>
+          <h2 class="arrow">
+            <a href="#"><i class="icon ion-ios-arrow-down  animated infinite fadeInDown "></i></a>
+          </h2>
+        </div>
+      </div>
+    </div>
+    
+    <canvas id="canvas1"></canvas>
+    
+    <div class="container">
+      <div class="section-about section " id="about" >
+        <div class="row flex ">
+          <div class="col-md-8 col-xs-10 col-xs-offset-1 col-sm-9">
+            <div class="">
+              <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">IN A NUTSHELL</h5>
+              <h2 class="section-heading wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.5s">WE DELIVER STRATEGIC EXPERIENCES AND PLATFORMS ACROSS THE WEB</h2>
+              <div class="bar  wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.5s"></div>
+              <p class="description  wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">Software engineering isn’t just something we do.<span class="text-highlight">That’s what we are made of.</span> Everyday at swiftkind, our team work passionately to deliver custom solutions to fit our clients’ needs and exceed expections.</p>
+              <!-- <div class="pull-right about-link  wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="1s">
+                  <a href="#">KNOW OUR STORY<span class=""> <i class="icon ion-ios-arrow-thin-right"></i></span></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+              
+        <div class="portfolio">
+          <ul>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Behance</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-                            <a href="#" class="site-logo" ><img src="{% static 'theme/images/logo.png' %}" class="img-responsive"></a>
-                            <h1 class="section-heading align-center wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">Builds fast and high-quality web applications and platforms.</h1>
-                            <h4 class="sub-heading wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.2s">Delivering experiences and application across the web</h4>
-                            <div class='mouse-container'>
-                                <div class='mouse'>
-                                    <span class='scroll-down'></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 <!-- bubble background -->
-                    <div class="wrapper">
-                        <ul class="bg-bubbles">
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                        </ul>
-                    </div>
-                <!-- bubble background -->
+    <div class="container-fluid">
+      <div class="row flex section no-margin">
+        <div class="col-md-6 col-md-offset-1 col-xs-12 col-sm-12">
+          <div class="wow fadeInDown align-center user-centered " data-wow-duration="0.5s" data-wow-delay="0s">
+            <div class="image img-3 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="1s">
+              <img src="{% static 'theme/images/sc-3.png' %}" class="img-responsive object-hover">
+            </div>
+            <div class="image img-2  wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.75s">
+              <img src="{% static 'theme/images/sc-2.png' %}" class="img-responsive object-hover">
+            </div>  
+            <div class="image img-1  wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.5s">
+              <img src="{% static 'theme/images/sc-1.png' %}" class="img-responsive object-hover">
+            </div>  
+          </div>
+        </div>
+
+        <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 col-sm-10">
+          <div>
+            <div>
+              <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">Back-end development</h5>
+            </div>
+            <h2 class="section-heading wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0s">High-end Software Development</h2>
+            <div class="bar wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
+            <p class="section-text wow fadeInRight" data-wow-duration="0.75s" data-wow-delay="0.25s">
+               Our wide experience enables us to develop high-performance and scalable platforms using cutting edge technologies and agile methologies. Building apps from simple CRM and Analysis platforms to Mobile APIs we're taking one step ahead at a time.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row flex section hidden-xs no-margin">
+        <div class="col-md-4 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-10">
+          <div>
+            <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s">interaction design</h5>
+            <h2 class="section-heading wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">User-centered designs</h2>
+            <div class="bar wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
+            <p class="section-text wow fadeInLeft" data-wow-duration="0.75s" data-wow-delay="0.25s">
+                We design interactive user interfaces and experiences with primary focus on aesthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-md-offset-0 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-10">
+          <div class="wow fadeInDown align-center user-centered user-2" data-wow-duration="0.5s" data-wow-delay="0s">
+            <div class="image img-3 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="1s">
+              <img src="{% static 'theme/images/user-3.png' %}" class="img-responsive object-hover">
+            </div>
+            <div class="image img-2  wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.75s">
+              <img src="{% static 'theme/images/user-2.png' %}" class="img-responsive object-hover">
+            </div>
+            <div class="image img-1  wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.5s">
+              <img src="{% static 'theme/images/user-1.png' %}" class="img-responsive object-hover">
+            </div>  
+          </div>
+        </div>
+      </div>
+
+      <div class="row flex section visible-xs no-margin">
+        <div class="col-md-6 col-xs-10 col-xs-offset-1">
+          <div class="wow fadeInDown align-center user-centered" data-wow-duration="0.5s" data-wow-delay="0s">
+            <div class="image img-3 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="1s">
+              <img src="{% static 'theme/images/user-3.png' %}" class="img-responsive object-hover">
+            </div>
+            <div class="image img-2  wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.75s">
+              <img src="{% static 'theme/images/user-2.png' %}" class="img-responsive object-hover">
+            </div>  
+            <div class="image img-1  wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.5s">
+              <img src="{% static 'theme/images/user-1.png' %}" class="img-responsive object-hover">
+            </div>  
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-10 col-xs-offset-1  col-sm-offset-1 col-sm-10">
+          <div>
+            <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s">interaction design</h5>
+            <h2 class="section-heading wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">User-centered designs</h2>
+            <div class="bar wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
+            <p class="section-text wow fadeInLeft" data-wow-duration="0.75s" data-wow-delay="0.25s">
+                We design interactive user interfaces and experiences with primary focus on aesthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
+            </p>
+          </div>
+        </div>   
+      </div>
+    </div>
+
+    <div class="section-offer section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 item">
+            <div class="icon">
+              <img src="{% static 'theme/images/ui-ux.svg' %}" class="img-responsive   wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">
+            </div>
+            <div class="text-left  wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
+              <h2 class="section-heading text-capitalize">UI/UX design & prototyping</h2>
+              <div class="bar"></div>
+              <p class="section-text">
+                We design interactive user interfaces and experiences with primary focus on aesthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 item">
+            <div class="icon">
+              <img src="{% static 'theme/images/pool.svg' %}" class="img-responsive  wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
+            </div>
+            <div class="text-left  wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
+              <h2 class="section-heading text-capitalize">Developers Pool</h2>
+              <div class="bar"></div>
+              <p class="section-text">
+                  We design interactive user interfaces and experiences with primary focus on aesthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class=" col-md-6 item">
+            <div class="icon">
+              <img src="{% static 'theme/images/product-dev.svg' %}" class="img-responsive  wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
+            </div>
+            <div class="text-left  wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
+              <h2 class="section-heading text-capitalize">Product Development</h2>
+              <div class="bar"></div>
+              <p class="section-text">
+                  We design interactive user interfaces and experiences with primary focus on aesthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 item">
+            <div class="icon">
+              <img src="{% static 'theme/images/test.svg' %}" class="img-responsive  wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
+            </div>
+            <div class="text-left  wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
+              <h2 class="section-heading text-capitalize">Test-Driven Development</h2>
+              <div class="bar"></div>
+              <p class="section-text">
+                  We design interactive user interfaces and experiences with primary focus on aesthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4  text-center item wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.2s">
+            <div class="item-avatar">
+              <img src="{% static 'theme/images/agility.svg' %}" class="img-responsive">
+            </div>
+            <h4 class="item-heading text-uppercase">AGILITY </h4>
+            <p class="item-desc">Parallel approach on doing development with transparent feedback loop. </p>
+          </div>
+          <div class="col-md-4 col-sm-4 text-center item wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">
+            <div class="item-avatar">
+              <img src="{% static 'theme/images/practice.svg' %}" class="img-responsive">
+            </div>
+            <h4 class="item-heading text-uppercase">Best practices </h4>
+            <p class="item-desc">Following standard principles, writing idiomatic codes and applying proven processes.</p>
+          </div>
+          <div class="col-md-4 col-sm-4 text-center item wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.2s">
+            <div class="item-avatar">
+              <img src="{% static 'theme/images/engagement.svg' %}" class="img-responsive">
+            </div>
+            <h4 class="item-heading text-uppercase">Engagement models </h4>
+            <p class="item-desc">Simple and flexible services to address client's needs and requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-team section-full section" id="team">
+      <div class="container no-padding">
+        <div class="row no-margin">
+          <div class="text-center">
+            <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">MEET THE GEEKS</h5>
+            <h2 class="section-heading wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s" style="font-size: 200%">The Dream Team. Our team is composed of skilled coders who excelled in their respective fields.</h2>
+            <div class="bar align-center wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
+          </div>
+        </div>
+
+        <div class="row team-list team-lg">
+          <div class="col-md-3 col-sm-4 ">
+            <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+              <img src="{% static 'theme/images/person5.png' %}" class="img-responsive">
+              <div class="name">
+                <div class="text-center align-center">
+                  <h3 class="text-capitalize">Earvin Gemenez</h3>
+                  <p class="text-capitalize">Co-Founder &amp; CEO</p>
                 </div>
-                <div class="container-fluid ">
-                    <div class="row flex section" id="backend">
-                        <div class="col-md-6">
-                           <div class="section-main-img wow"  data-wow-duration="1s" data-wow-delay="0s">
-                                <img src="{% static 'theme/images/backend.svg' %}" class="img-responsive">
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div>
-                                <div>
-                                    <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s">Back-end development</h5>
-                                </div>
-                                 <h2 class="section-heading wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0s">High-end Software Development</h2>
-                                 <div class="bar wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
-                                 <p class="section-text wow fadeInRight" data-wow-duration="0.75s" data-wow-delay="0.25s">
-                                     We develop High-performance and scalable Web Platforms. Our skilled coders have wide experience developing apps for various needs and business requirements. Using cutting-edge technologies and Agile approach we develop apps that range from simple CRM and Analysis platforms to Mobile APIs.
-                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div  class="row flex section section-2">
-                        <div class="col-md-4 col-md-offset-2">
-                            <div>
-                                 <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s">Back-end development</h5>
-                                 <h2 class="section-heading wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0s">User-centered designs</h2>
-                                 <div class="bar wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
-                                 <p class="section-text wow fadeInLeft" data-wow-duration="0.75s" data-wow-delay="0.25s">
-                                     We design interactive user interfaces and experiences with primary focus on easthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
-                                 </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="section-main-img wow"  data-wow-duration="0s" data-wow-delay="1s">
-                                 <img src="{% static 'theme/images/webdesign.svg' %}" class="img-responsive">
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 ">
+            <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+              <img src="{% static 'theme/images/person6.png' %}" class="img-responsive">
+              <div class="name">
+                <div class="text-center align-center">
+                  <h3 class="text-capitalize">Manny Candidier</h3>
+                  <p class="text-capitalize">Co-Founder &amp; CTO</p>
                 </div>
-                <div class="section-offer section">
-                    <div class="text-center section-title">
-                        <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">Back-end development</h5>
-                        <h2 class="section-heading wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">What we offer</h2>
-                        <div class="bar align-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0s"></div>
-                    </div>
-                    <main>
-                        <div class="vert-line"></div>
-                            <div class="vertical-slider">
-                                <div class="slide  slide-1">
-                                    <div class="slide-content">
-                                        <div class="container">
-                                            <div class="row flex">
-                                                <div class="col-md-6">
-                                                    <div class="section-main-img">
-                                                        <img src="{% static 'theme/images/developers.svg' %}" class="img-responsive">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div>
-                                                        <h5 class="text-uppercase section-sub-heading">Back-end development</h5>
-                                                        <h2 class="section-heading text-capitalize">Developers pool</h2>
-                                                        <div class="bar"></div>
-                                                        <p class="section-text">
-                                                             We design interactive user interfaces and experiences with primary focus on easthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                              </div>
-                              <div class="slide slide-2">
-                                    <div class="slide-content">
-                                        <div class="container">
-                                            <div class="row flex">
-                                                <div class="col-md-6">
-                                                    <div class="section-main-img">
-                                                          <img src="{% static 'theme/images/product.svg' %}" class="img-responsive">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div>
-                                                        <h5 class="text-uppercase section-sub-heading">Back-end development</h5>
-                                                         <h2 class="section-heading text-capitalize">Product development</h2>
-                                                         <div class="bar"></div>
-                                                         <p class="section-text">
-                                                             We design interactive user interfaces and experiences with primary focus on easthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
-                                                         </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                              </div>
-                              <div class="slide slide-3">
-                                <div class="slide-content">
-                                    <div class="container">
-                                        <div class="row flex">
-                                            <div class="col-md-6">
-                                                <div class="section-main-img">
-                                                      <img src="{% static 'theme/images/rocket.svg' %}" class="img-responsive">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div>
-                                                    <h5 class="text-uppercase section-sub-heading">Back-end development</h5>
-                                                    <h2 class="section-heading text-capitalize">UI/UX design & prototyping</h2>
-                                                    <div class="bar"></div>
-                                                    <p class="section-text">
-                                                         We design interactive user interfaces and experiences with primary focus on easthetics, feeling and functionalities. Our main goal is to produce user-centered products that work according to what is expected or even exceed it. Using Photoshop, Sketch, Illustrator, InVision, and Balsamiq, we delivery designs with high quality standards.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 ">
+            <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+              <img src="{% static 'theme/images/person4.png' %}" class="img-responsive">
+              <div class="name">
+                <div class="text-center align-center">
+                  <h3 class="text-capitalize">Kevin Kalis</h3>
+                  <p class="text-capitalize">Full Stack Developer</p>
                 </div>
-                <div class="section-skills">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 text-center item wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.2s">
-                                <div class="item-avatar">
-                                    <img src="{% static 'theme/images/agility.svg' %}" class="img-responsive">
-                                </div>
-                                <h4 class="item-heading text-uppercase">AGILITY </h4>
-                                <p class="item-desc">Parallel approach on doing development with transparent feedback loop. </p>
-                            </div>
-                            <div class="col-md-4 text-center item wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">
-                                <div class="item-avatar">
-                                    <img src="{% static 'theme/images/practice.svg' %}" class="img-responsive">
-                                </div>
-                                <h4 class="item-heading text-uppercase">Best practices </h4>
-                                <p class="item-desc">Following standard principles, writing idiomatic codes and applying proven processes.</p>
-                            </div>
-                            <div class="col-md-4 text-center item wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.2s">
-                                <div class="item-avatar">
-                                    <img src="{% static 'theme/images/engagement.svg' %}" class="img-responsive">
-                                </div>
-                                <h4 class="item-heading text-uppercase">Engagement models </h4>
-                                <p class="item-desc">Simple and flexible services to address client's needs and requirements.</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 ">
+            <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+              <img src="{% static 'theme/images/person1.png' %}" class="img-responsive">
+              <div class="name">
+                <div class="text-center align-center">
+                  <h3 class="text-capitalize">Jerome Rumbaoa</h3>
+                  <p class="text-capitalize">Python Developer</p>
                 </div>
-                <div class="section-team section-full section">
-                    <div class="container">
-                            <div class="text-center">
-                                <h5 class="text-uppercase section-sub-heading wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">OUR TEAM</h5>
-                                <h2 class="section-heading wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">Pickled taxidermy coloring book, deep v ramps distillery</h2>
-                                <div class="bar align-center wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
-                            </div>
-                           <div class="team-list">
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person1.png' %}" class="img-circle img-responsive align-center hvr-grow  wow fadeIn" data-wow-duration="0.25s" data-wow-delay="0.15s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.15s">Sam Clafin</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.15s">Software Developer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person2.png' %}" class="img-circle img-responsive align-center hvr-grow wow fadeIn" data-wow-duration="0.25s" data-wow-delay="0.3s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">Ben Barnes</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">Software Developer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person3.png' %}" class="img-circle img-responsive align-center  hvr-grow wow fadeIn" data-wow-duration="0.25s" data-wow-delay="0.45s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.45s">Edward Cullen</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.45s">Software Developer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person3.png' %}" class="img-circle img-responsive align-center  hvr-grow wow fadeIn" data-wow-duration="0.25s" data-wow-delay="0.45s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.45s">Edward Cullen</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.45s">Software Developer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person5.png' %}" class="img-circle img-responsive align-center hvr-grow wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.75s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">Awkward Cullen</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">UI/UX Designer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person6.png' %}" class="img-circle img-responsive align-center hvr-grow wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.9s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.9s">Sam Clafin</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.9s">Software Developer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person7.png' %}" class="img-circle img-responsive align-center hvr-grow wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1.15s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.15s">Sam Clafin</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.15s">Software Developer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person8.png' %}" class="img-circle img-responsive align-center hvr-grow wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1.3s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.3s">Zac Efron</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.3s">Software Developer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person9.png' %}" class="img-circle img-responsive align-center hvr-grow wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1.45s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.45s">Awkward Smith</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.45s">Software Developer</p>
-                                </div>
-                                <div class="team-member">
-                                    <img src="{% static 'theme/images/person1.png' %}" class="img-circle img-responsive align-center hvr-grow wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1.6s">
-                                    <h4 class="member-name wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.6s">Sam Clafin</h4>
-                                    <p class="job-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.6s">Software Developer</p>
-                                </div>
-                           </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+              <img src="{% static 'theme/images/person7.png' %}" class="img-responsive">
+              <div class="name">
+                <div class="text-center align-center">
+                <h3 class="text-capitalize">Dudz candidier</h3>
+                <p class="text-capitalize">Python Developer</p>
                 </div>
-                <div class="container section-testimony  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <div class="text-center">
-                        <h2 class="section-heading">Client Feedbacks</h2>
-                    </div>
-                    <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="text-center">
-                                <p class="testimony-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                                <div class="author">
-                                    <div class="avatar">
-                                        <img src="{% static 'theme/images/person1.png' %}" class="img-responsive">
-                                    </div>
-                                    <div class="author-details text-left">
-                                        <p class="name">Ben arnes</p>
-                                        <p class="company"><span class="company-logo"></span>Twitter</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="text-center">
-                                <p class="testimony-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                                <div class="author">
-                                    <div class="avatar">
-                                        <img src="{% static 'theme/images/person1.png' %}" class="img-responsive">
-                                    </div>
-                                    <div class="author-details text-left">
-                                        <p class="name">Ben arnes</p>
-                                        <p class="company"><span class="company-logo"></span>Twitter</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="text-center">
-                                <p class="testimony-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                                <div class="author">
-                                    <div class="avatar">
-                                        <img src="{% static 'theme/images/person1.png' %}" class="img-responsive">
-                                    </div>
-                                    <div class="author-details text-left">
-                                        <p class="name">Ben arnes</p>
-                                        <p class="company"><span class="company-logo"></span>Twitter</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="text-center">
-                                <p class="testimony-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                                <div class="author">
-                                    <div class="avatar">
-                                        <img src="{% static 'theme/images/person1.png' %}" class="img-responsive">
-                                    </div>
-                                    <div class="author-details text-left">
-                                        <p class="name">Ben arnes</p>
-                                        <p class="company"><span class="company-logo"></span>Twitter</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+              <img src="{% static 'theme/images/person8.png' %}" class="img-responsive">
+                <div class="name">
+                  <div class="text-center align-center">
+                    <h3 class="text-capitalize">Restie Antiquin</h3>
+                    <p class="text-capitalize">UI/UX Designer</p>
+                  </div>
                 </div>
-                <div class="projects section">
-                    <div class="container ">
-                        <div class="row flex">
-                            <div class="col-md-7 col-md-offset-1">
-                                <div>
-                                    <h5 class="text-uppercase section-sub-heading  wow fadeInUp" data-wow-duration="0.25s" data-wow-delay="0s">our projects</h5>
-                                    <h2 class="section-heading wow fadeInUp" data-wow-duration="0.25s" data-wow-delay="0s">Projects Lo-fi schlitz flannel godard deep v celiac </h2>
-                                    <div class="bar wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
-                                    <p class="section-text wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0s">
-                                       La croix humblebrag crucifix neutra gentrify. Cronut edison bulb chicharrones raw denim poke marfa chillwave tattooed. Woke semiotics austin
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-4  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
-                               <div class="image-container image-container-num2">
-                                    <div class="image image-num2">
-                                        <img src="{% static 'theme/images/proj1.png' %}"  />
-                                    </div>
-                                    <div class="caption caption-num2 text-center">
-                                            <p class="title">Singing you to shipwreck </p>
-                                            <div class="bar"></div>
-                                        <ul class="list">
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li></ul>
-                                        <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+              <img src="{% static 'theme/images/person3.png' %}" class="img-responsive">
+              <div class="name">
+                <div class="text-center align-center">
+                  <h3 class="text-capitalize">King Rule</h3>
+                  <p class="text-capitalize">Junior Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-list">
+          <div class="owl-carousel owl-theme visible-xs visible-sm  owl-loaded owl-drag" id="team-xs" >
+            <div class="item">
+              <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+                <img src="{% static 'theme/images/person5.png' %}" class="img-responsive">
+                <div class="name">
+                  <div class="text-center align-center">
+                    <h3 class="text-capitalize">Earvin Gemenez</h3>
+                    <p class="text-capitalize">Co-Founder &amp; CEO</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+                <img src="{% static 'theme/images/person6.png' %}" class="img-responsive">
+                <div class="name">
+                  <div class="text-center align-center">
+                    <h3 class="text-capitalize">Manny Candidier</h3>
+                    <p class="text-capitalize">Co-Founder &amp; CTO</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+                <img src="{% static 'theme/images/person4.png' %}" class="img-responsive">
+                <div class="name">
+                  <div class="text-center align-center">
+                    <h3 class="text-capitalize">Kevin Kalis</h3>
+                    <p class="text-capitalize">Full Stack Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+                <img src="{% static 'theme/images/person1.png' %}" class="img-responsive">
+                <div class="name">
+                  <div class="text-center align-center">
+                    <h3 class="text-capitalize">Jerome Rumbaoa</h3>
+                    <p class="text-capitalize">Python Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+                <img src="{% static 'theme/images/person7.png' %}" class="img-responsive">
+                <div class="name">
+                  <div class="text-center align-center">
+                    <h3 class="text-capitalize">Dudz candidier</h3>
+                    <p class="text-capitalize">Python Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+                <img src="{% static 'theme/images/person8.png' %}" class="img-responsive">
+                <div class="name">
+                  <div class="text-center align-center">
+                    <h3 class="text-capitalize">Restie Antiquin</h3>
+                    <p class="text-capitalize">UI/UX Designer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team-member wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.4s">
+                <img src="{% static 'theme/images/person3.png' %}" class="img-responsive">
+                <div class="name">
+                  <div class="text-center align-center">
+                    <h3 class="text-capitalize">King Rule</h3>
+                    <p class="text-capitalize">Junior Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- <div class="container section-testimony  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="text-center">
+            <h2 class="section-heading">Client Feedback</h2>
+        </div>
+        <div class="owl-carousel owl-theme" id="testimony">
+            <div class="item">
+                <div class="text-center">
+                    <p class="testimony-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <div class="author">
+                        <div class="avatar">
+                            <div class="photo img-responsive img-circle" style="background-image:url('assets/images/person1.png')"></div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                                <div class="image-container image-container-num2 down-item">
-                                    <div class="image image-num2">
-                                        <img src="{% static 'theme/images/proj1.png' %}"  />
-                                    </div>
-                                    <div class="caption caption-num2 text-center">
-                                            <p class="title">Singing you to shipwreck </p>
-                                            <div class="bar"></div>
-                                        <ul class="list">
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li></ul>
-                                        <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                                <div class="image-container image-container-num2 down-item">
-                                    <div class="image image-num2">
-                                        <img src="{% static 'theme/images/proj1.png' %}"  />
-                                    </div>
-                                    <div class="caption caption-num2 text-center">
-                                            <p class="title">Singing you to shipwreck </p>
-                                            <div class="bar"></div>
-                                        <ul class="list">
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                        </ul>
-                                        <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                                <div class="image-container image-container-num2 down-item">
-                                    <div class="image image-num2">
-                                        <img src="{% static 'theme/images/proj1.png' %}"  />
-                                    </div>
-                                    <div class="caption caption-num2 text-center">
-                                            <p class="title">Singing you to shipwreck </p>
-                                            <div class="bar"></div>
-                                        <ul class="list">
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li></ul>
-                                        <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.75s">
-                                <div class="image-container image-container-num2 down-item">
-                                    <div class="image image-num2">
-                                        <img src="{% static 'theme/images/proj1.png' %}"/>
-                                    </div>
-                                    <div class="caption caption-num2 text-center">
-                                            <p class="title">Singing you to shipwreck </p>
-                                            <div class="bar"></div>
-                                        <ul class="list">
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                        </ul>
-                                        <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
-                                <div class="image-container image-container-num2 down-item">
-                                    <div class="image image-num2">
-                                        <img src="{% static 'theme/images/proj1.png' %}"  />
-                                    </div>
-                                    <div class="caption caption-num2 text-center">
-                                            <p class="title">Singing you to shipwreck </p>
-                                            <div class="bar"></div>
-                                        <ul class="list">
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                            <li>Angular JS</li>
-                                            <li>HTML5/CSS3</li>
-                                            <li>Django</li>
-                                        </ul>
-                                        <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="author-details text-left">
+                            <p class="name">Ben arnes</p>
+                            <p class="company"><span class="company-logo"></span>Twitter</p>
                         </div>
                     </div>
                 </div>
-                <div class="technologies section">
-                    <div class="container">
-                        <div class="row">
-                                <div class="col-md-offset-1 col-md-10">
-                                    <div class="text-center">
-                                    <h5 class="text-uppercase section-sub-heading  wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">OUR technologies</h5>
-                                    <h2 class="section-heading wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">Projects Lo-fi schlitz flannel godard deep v celiac </h2>
-                                    <p class="section-text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-                                       La croix humblebrag crucifix neutra gentrify. Cronut edison bulb chicharrones raw denim poke marfa chillwave tattooed. Woke semiotics austin
-                                    </p>
-                                </div>
-                            </div>
+            </div>
+            <div class="item">
+                <div class="text-center">
+                    <p class="testimony-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <div class="author">
+                        <div class="avatar">
+                            <div class="photo img-responsive img-circle" style="background-image:url('assets/images/person1.png')"></div>
                         </div>
-                        <div class="tech-list">
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.15s">
-                                <img src="{% static 'theme/images/techs/angular-logo.png' %}" class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                                <img src="{% static 'theme/images/techs/bootstrap.png' %}"  class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.45s">
-                                <img src="{% static 'theme/images/techs/coffeescript.png' %}" class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                                <img src="{% static 'theme/images/techs/d3.png' %}"  class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.75s">
-                                <img src="{% static 'theme/images/techs/django.png' %}"  class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
-                                <img src="{% static 'theme/images/techs/git.png' %}"  class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.05s">
-                                <img src="{% static 'theme/images/techs/html5-logo.png' %}"  class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.20s">
-                                <img src="{% static 'theme/images/techs/node-js-logo.png' %}" class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.35s">
-                                <img src="{% static 'theme/images/techs/python-logo.png' %}" class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
-                                <img src="{% static 'theme/images/techs/sass-logo.png' %}" class="img-responsive align-center">
-                            </div>
-                            <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.65s">
-                                <img src="{% static 'theme/images/techs/scrum.png' %}" class="img-responsive align-center">
-                            </div>
+                        <div class="author-details text-left">
+                            <p class="name">Ben arnes</p>
+                            <p class="company"><span class="company-logo"></span>Twitter</p>
                         </div>
                     </div>
                 </div>
-                <div class="cta-section section-2">
-                    <div class="text-center">
-                        <h3>Some great ideas start here!</h3>
-                        <a href="javascript:;" class="cta-btn  contact-trigger">Connect with us!</a>
+            </div>
+            <div class="item">
+                <div class="text-center">
+                    <p class="testimony-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <div class="author">
+                        <div class="avatar">
+                            <div class="photo img-responsive img-circle" style="background-image:url('assets/images/person1.png')"></div>
+                        </div>
+                        <div class="author-details text-left">
+                            <p class="name">Ben arnes</p>
+                            <p class="company"><span class="company-logo"></span>Twitter</p>
+                        </div>
                     </div>
                 </div>
-                <footer> 
-                    <div class="text-center">
-                        <p> &copy; Swiftkind (2016)</p>
+            </div>
+            <div class="item">
+                <div class="text-center">
+                    <p class="testimony-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <div class="author">
+                        <div class="avatar">
+                            <div class="photo img-responsive img-circle" style="background-image:url('assets/images/person1.png')"></div>
+                        </div>
+                        <div class="author-details text-left">
+                            <p class="name">Ben arnes</p>
+                            <p class="company"><span class="company-logo"></span>Twitter</p>
+                        </div>
                     </div>
-               </footer>
+                </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="projects section" id="projects">
+      <div class="container">
+        <div class="row flex">
+          <div class="col-md-7 col-md-offset-1 hidden-sm">
+            <div>
+              <h5 class="text-uppercase section-sub-heading  wow fadeInUp" data-wow-duration="0.25s" data-wow-delay="0s">our projects</h5>
+              <h2 class="section-heading wow fadeInUp" data-wow-duration="0.25s" data-wow-delay="0s">Projects Lo-fi schlitz flannel godard deep v celiac </h2>
+              <div class="bar wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
+              <p class="section-text wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0s">
+                  La croix humblebrag crucifix neutra gentrify. Cronut edison bulb chicharrones raw denim poke marfa chillwave tattooed. Woke semiotics austin
+              </p>
+            </div>
+          </div>
+          <div class="col-md-7 col-md-offset-1 col-sm-12 visible-sm">
+            <div class="text-center">
+              <h5 class="text-uppercase section-sub-heading  wow fadeInUp" data-wow-duration="0.25s" data-wow-delay="0s">our projects</h5>
+              <h2 class="section-heading wow fadeInUp" data-wow-duration="0.25s" data-wow-delay="0s">Projects Lo-fi schlitz flannel godard deep v celiac </h2>
+              <div class="bar wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s"></div>
+              <p class="section-text wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0s">
+                  La croix humblebrag crucifix neutra gentrify. Cronut edison bulb chicharrones raw denim poke marfa chillwave tattooed. Woke semiotics austin
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 col-sm-6 wow fadeInUp hidden-sm" data-wow-duration="1s" data-wow-delay="0s">
+            <div class="image-container image-container-num2 up-item align-center">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/swiftjobs.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row visible-sm">
+          <div class="col-md-4  col-xs-12 col-sm-6 wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/tracker.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                </ul>
+                  <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 col-sm-6 wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/learn.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 col-sm-6 wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/board.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 col-sm-6 wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/board.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 col-sm-6 wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                  <img src="{% static 'theme/images/board.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 col-sm-6 wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/board.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                    <li>Angular JS</li>
+                    <li>Django</li>
+                    <li>Angular JS</li>
+                    <li>HTML5/CSS3</li>
+                    <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row hidden-sm">
+          <div class="col-md-4  col-xs-12  wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/tracker.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12  wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/learn.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="image-container image-container-num2 down-item">
+              <div class="image image-num2">
+                <img src="{% static 'theme/images/board.png' %}" />
+              </div>
+              <div class="caption caption-num2 text-center">
+                <p class="title">Singing you to shipwreck </p>
+                <div class="bar"></div>
+                <ul class="list">
+                  <li>Angular JS</li>
+                  <li>Django</li>
+                  <li>Angular JS</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Django</li>
+                </ul>
+                <a class="project-link"><i class="icon ion-ios-plus-empty"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="animated slideInDown right-sidebar">
+
+    <div class="technologies section" id="technologies">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10">
+            <div class="text-center">
+              <h5 class="text-uppercase section-sub-heading  wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s">OUR technologies</h5>
+              <h2 class="section-heading wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">Projects Lo-fi schlitz flannel godard deep v celiac </h2>
+              <p class="section-text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0s">
+                  La croix humblebrag crucifix neutra gentrify. Cronut edison bulb chicharrones raw denim poke marfa chillwave tattooed. Woke semiotics austin
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="tech-list">
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.15s">
+              <img src="{% static 'theme/images/techs/angular-logo.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+              <img src="{% static 'theme/images/techs/bootstrap.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.45s">
+              <img src="{% static 'theme/images/techs/coffeescript.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+              <img src="{% static 'theme/images/techs/d3.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.75s">
+              <img src="{% static 'theme/images/techs/django.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
+              <img src="{% static 'theme/images/techs/git.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.05s">
+              <img src="{% static 'theme/images/techs/html5-logo.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.20s">
+              <img src="{% static 'theme/images/techs/node-js-logo.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.35s">
+              <img src="{% static 'theme/images/techs/python-logo.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+              <img src="{% static 'theme/images/techs/sass-logo.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.65s">
+              <img src="{% static 'theme/images/techs/scrum.png' %}" class="img-responsive align-center">
+          </div>
+          <div class="tech-item  wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.65s">
+              <img src="{% static 'theme/images/techs/postgres.png' %}" class="img-responsive align-center">
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="visible-xs contact-xs">
+        <div class="container">
+                  <div class="row">
+                      <div class="col-md-12 col-xs-12">
+                          <h6 class="title">CONTACT</h6>
+                      </div>
+                      <div class="col-md-6 col-xs-12">
+                          <h2 class="contact-heading">Some great ideas start here!</h2>
+                          <p>Shoot us an e-mail at</p>
+                          <a href="#"><h2>Hello@swiftkind.com </h2></a>
+                      </div>
+                      <div class="col-md-6 col-xs-12">
+                          <p>Headquarters</p>
+                          <h2>Davao City</h2>
+                          <div class="row">
+                              <div class="col-md-8">
+                                  <h5 class="section-sub-heading">Address</h5>
+                                  <div class="address">
+                                      <p>#730-A Molave Street, Juna Subdivision, Matina, Davao City, Philippines, 8000</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <h5 class="section-sub-heading">Phone</h5>
+                                  <div class="phone">
+                                      <p>(082) 225 - 1050</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <fieldset class="material">
+                              <input type="text" required>
+                              <hr>
+                              <label>Name</label>
+                          </fieldset>
+                      </div>
+                      <div class="col-md-6">
+                          <fieldset class="material">
+                              <input type="text" required>
+                              <hr>
+                              <label>E-mail</label>
+                          </fieldset>
+                      </div>
+                      <div class="col-md-6">
+                          <fieldset class="material">
+                              <input type="text" required>
+                              <hr>
+                              <label>Company (optional)</label>
+                          </fieldset>
+                      </div>
+                      <div class="col-md-6">
+                          <fieldset class="material">
+                              <input type="text" required>
+                              <hr>
+                              <label>Phone</label>
+                          </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                          <fieldset class="material">
+                              <textarea required></textarea>
+                              <hr>
+                              <label>Message</label>
+                          </fieldset>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="text-right send">
+                          <button class="btn ">Send</button>
+                        </div>
+                      </div> 
+                     
+                  </div>
+              </div>
+     </div>
+      <footer>
+          <div class="text-center">
+              <p> &copy; Swiftkind (2016)</p>
+          </div>
+      </footer>
+  </div>
+    <div class="right-sidebar">
         <div class="content">
             <div class="container">
                 <div class="row">
                     <div class="pull-right">
                         <h3> <a href="javascript:;" class="close-contact"><i class="icon ion-close-round"></i></a></h3>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 col-xs-12">
                         <h6 class="title">CONTACT</h6>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-xs-12">
                         <h2 class="contact-heading">Some great ideas start here!</h2>
                         <p>Shoot us an e-mail at</p>
                         <a href="#"><h2>Hello@swiftkind.com </h2></a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-xs-12">
                         <p>Headquarters</p>
                         <h2>Davao City</h2>
                         <div class="row">
                             <div class="col-md-8">
-                               <h5 class="section-sub-heading">Address</h5>
-                               <div class="address">
+                                <h5 class="section-sub-heading">Address</h5>
+                                <div class="address">
                                     <p>#730-A Molave Street, Juna Subdivision, Matina, Davao City, Philippines, 8000</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                               <h5 class="section-sub-heading">Phone</h5>
+                                <h5 class="section-sub-heading">Phone</h5>
                                 <div class="phone">
                                     <p>(082) 225 - 1050</p>
                                 </div>
@@ -614,55 +927,56 @@
                         </div>
                     </div>
                 </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <fieldset class="material">
-                                <input type="text" required>
-                                <hr>
-                                <label>Name</label>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset class="material">
-                                <input type="text" required>
-                                <hr>
-                                <label>E-mail</label>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset class="material">
-                                <input type="text" required>
-                                <hr>
-                                <label>Company (optional)</label>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset class="material">
-                                <input type="text" required>
-                                <hr>
-                                <label>Phone</label>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-12">
-                            <fieldset class="material">
-                                <textarea required></textarea>
-                                <hr>
-                                <label>Message</label>
-                            </fieldset>
-                        </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <fieldset class="material">
+                            <input type="text" required>
+                            <hr>
+                            <label>Name</label>
+                        </fieldset>
                     </div>
+                    <div class="col-md-6">
+                        <fieldset class="material">
+                            <input type="text" required>
+                            <hr>
+                            <label>E-mail</label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset class="material">
+                            <input type="text" required>
+                            <hr>
+                            <label>Company (optional)</label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset class="material">
+                            <input type="text" required>
+                            <hr>
+                            <label>Phone</label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                        <fieldset class="material">
+                            <textarea required></textarea>
+                            <hr>
+                            <label>Message</label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="text-right send">
+                        <button class="btn ">Send</button>
+                      </div>
+                    </div> 
                 </div>
             </div>
         </div>
+    </div>
     <script type="text/javascript" src="{% static 'theme/js/jquery-2.1.4.js' %}"></script>
     <script type="text/javascript" src="{% static 'theme/js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'theme/dist/owl-carousel/js/owl.carousel.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'theme/dist/fullPage.js-master/js/scrolloverflow.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'theme/dist/fullPage.js-master/js/jquery.easings.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'theme/dist/fullPage.js-master/js/jquery.fullpage.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'theme/dist/dots/js/index.js' %}"></script>
     <script type="text/javascript" src="{% static 'theme/dist/wow/js/wow.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'theme/dist/vertical-slider/js/slick.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'theme/dist/vertical-slider/js/jquery.mousewheel.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'theme/js/main.js' %}"></script>
 </body>
 </html>
