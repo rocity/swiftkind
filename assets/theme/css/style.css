@@ -1411,7 +1411,7 @@ nav.navbar .open path#middle {
 /* line 408, ../sass/_home.scss */
 .section-team .section-heading,
 .technologies .section-heading {
-  padding-right: 1.5em;
+  /*padding-right: 1.5em;*/
   margin: 0.5em auto;
 }
 @media (min-width: 320px) and (max-width: 767px) {

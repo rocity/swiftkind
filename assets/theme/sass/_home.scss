@@ -406,7 +406,7 @@
     height: auto;
     z-index: 10;
     .section-heading {
-        padding-right: 1.5em;
+        /*padding-right: 1.5em;*/
         margin: 0.5em auto;
         @include mobile {
             padding: 0;
