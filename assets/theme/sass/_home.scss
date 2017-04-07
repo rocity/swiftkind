@@ -7,6 +7,7 @@
     height: 100vh;
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 
 .masthead {
@@ -17,7 +18,7 @@
     @include mobile {
         padding-top: 3em;
     }
-    @include desktop-lg{
+    @include desktop-lg {
         padding-top: 10em;
     }
     .masthead-content {
@@ -152,6 +153,7 @@
 
 .section {
     min-height: 100vh;
+    z-index: 120;
 }
 
 .section-2 {
@@ -214,6 +216,7 @@
     position: relative;
     padding: 4em;
     display: inline-flex;
+    z-index: 120;
     align-items: baseline;
     @include mobile {
         padding: 2em;
@@ -221,8 +224,8 @@
     @include tablet {
         padding: 2em;
     }
-    &.user-2{
-        background:#1b9a7d;
+    &.user-2 {
+        background: #1b9a7d;
     }
     .image {}
     .img-1 {
@@ -393,9 +396,11 @@
         }
     }
 }
-#technologies{
+
+#technologies {
     padding-top: 6em;
 }
+
 .section-team,
 .technologies {
     padding: 6em 0;
@@ -416,10 +421,12 @@
         @include mobile {
             display: none;
         }
-        @include tablet{
+        @include tablet {
             display: none;
         }
-
+    }
+    .owl-carousel{
+        z-index: 120;
     }
     #team-xs {
         width: 100vw;
@@ -545,6 +552,7 @@
         cursor: pointer;
         border: none;
         transition: border ease-in 0.2s, background ease-in 0.2s;
+        z-index: 120;
         @include mobile {
             width: 290px;
             height: 184px;
@@ -559,9 +567,9 @@
             width: 340px;
             height: 222px;
         }
-        @include desktop{
-             width: 300px;
-        height: 194px;
+        @include desktop {
+            width: 300px;
+            height: 194px;
         }
     }
     .image {
@@ -581,9 +589,9 @@
             width: 340px;
             height: 222px;
         }
-        @include desktop{
-             width: 300px;
-        height: 194px;
+        @include desktop {
+            width: 300px;
+            height: 194px;
         }
     }
     .image img {
@@ -605,9 +613,9 @@
             width: 360px;
             height: 234px;
         }
-        @include desktop{
-             width: 300px;
-        height: 194px;
+        @include desktop {
+            width: 300px;
+            height: 194px;
         }
     }
     .caption-num2 {
@@ -646,7 +654,7 @@
         @include desktop-lg {
             transform: translateY(-220px);
         }
-        @include tablet{
+        @include tablet {
             transform: translateY(-202px);
         }
         .title {
@@ -694,6 +702,36 @@
                 width: 25%;
                 padding: 1em;
             }
+        }
+    }
+}
+
+.contact-us {
+    background: #12141a;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+    z-index: 120;
+    h4{
+        margin-bottom: 75px;
+    }
+    .contact-trigger {
+        background: #5d8c24;
+        color: #fff;
+        padding: 15px 36px;
+        font-size: 20px;
+        border-radius: 30px;
+        margin-top: 30px;
+        text-decoration: none;
+        &:active, &:focus{
+            text-decoration: none;
+            outline: none;
+            background: darken(#5d8c24, 15%);
+        }
+        &:hover{
+
+            background: darken(#5d8c24, 10%);
+            transition: ease-in-out 0.5s;
         }
     }
 }
