@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     z-index: 0;
+
 }
 
 .masthead {
@@ -415,6 +416,7 @@
         margin: 0.5em auto;
         @include mobile {
             padding: 0;
+            font-size: 24px!important;
         }
     }
     .team-lg {
@@ -430,6 +432,9 @@
     }
     #team-xs {
         width: 100vw;
+        @include tablet{
+            width: 100%;
+        }
     }
     .team-list,
     .tech-list {
@@ -532,6 +537,9 @@
     height: auto;
     padding: 10em 0;
     min-height: 1;
+    @include mobile{
+        padding:2em 0;
+    }
     .project-item {
         padding-top: 2em;
         position: relative;
