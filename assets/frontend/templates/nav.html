@@ -1,0 +1,59 @@
+<!-- NAVBAR SECTION  -->
+<nav class="navbar" ng-controller="NavController as ctrl">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="javascript:;" class="menu-trigger" ng-click="ctrl.triggerMenu()">
+        <div class="hamburger" ng-class="{'open':ctrl.menuOpen}">
+          <svg viewBox="161.5 76.5 30 23">
+            <g>
+              <path id="top" d="M162.5,80.5c0,0,17.083,0,18.621,0c15.378,0,7.689,24.774-1.538,15.547c-6.151-6.152-17-17-17-17" />
+              <path id="middle" d="M162.5,88h19" />
+              <path id="bottom" d="M162.5,95.5c0,0,17.083,0,18.621,0c15.378,0,7.689-24.44-1.538-15.213
+            c-6.151,6.151-17,16.833-17,16.833" />
+            </g>
+          </svg>
+        </div>
+        <!-- <span class="menu">MENU</span> <span class="logo"></span></a> -->
+      </a>
+      <a href="#home" class="text-logo" >Swiftkind</a>
+        <div class="pull-right">
+          <a class="contact-trigger" ng-click="ctrl.triggerContact()">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="276.667px" height="179.999px" viewBox="0 0 276.667 179.999" enable-background="new 0 0 276.667 179.999" xml:space="preserve">
+              <defs>
+                <style>
+                  svg:hover .envelop {
+                    stroke: #40e74c;
+                    transition: 0.5s;
+                  }
+                </style>
+              </defs>
+              <g>
+                <rect x="16.333" y="19" fill="none" stroke="#fff" stroke-width="10" stroke-miterlimit="10" width="246" height="144" class="envelop" />
+                <polyline fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="47,48.333 139.333,91 227,48.333 " class="envelop" />
+              </g>
+            </svg>
+          </a>
+        </div>
+      </a>
+    </div>
+          
+    <div class="text-center">
+      <div class="nav-logo">
+        <img src="static/theme/images/logo-icon.png" class="img-responsive align-center ">
+      </div>
+    </div>
+          
+    <div class="nav-links slideInDown " ng-class="{'open':ctrl.menuOpen}">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="http://blog.swiftkind.com/" target="_blank">Blogs</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+      </ul>
+    </div>
+    <div class="navbar-right pull-right"></div>
+  </div>
+</nav>
+
+<!-- NAVBAR SECTION  -->

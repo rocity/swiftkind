@@ -12,3 +12,12 @@ DATABASES = {
 }
 
 DEBUG = True
+
+DEFAULT_FROM_EMAIL = 'Swiftkind <swiftkind.test@gmail.com>'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'swiftkind.test@gmail.com'
+EMAIL_HOST_PASSWORD = 'gwapoako123'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+
+COMPANY_EMAIL = ''

@@ -4,7 +4,7 @@
   angular
     .module('swiftkind', [
       'ui.router',
-      'ui.bootstrap',
+      'ngAnimate',
     ])
     .constant('TEMPLATE_URL', "/static/frontend/templates/")
   ;

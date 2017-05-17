@@ -128,6 +128,18 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
+##################
+# E-MAIL SENDING #
+##################
+DEFAULT_FROM_EMAIL = ''
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+
+COMPANY_EMAIL = ''
+
 # Development settings
 try:
     from .local_settings import *

@@ -44,7 +44,7 @@
     };
 
     function sendMessage (form) {
-      return $http.post(API_URL + 'message/send/');
+      return $http.post(API_URL + 'message/', form);
     };
 
   };
