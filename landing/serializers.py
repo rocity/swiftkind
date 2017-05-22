@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Header, Stack, Project, Mockup
+from .models import Header, Stack, Project, Mockup, Message
 
 
 class HeaderSerializer(serializers.ModelSerializer):
@@ -24,3 +24,10 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ('title', 'desc', 'thumbnail', 'github', 'demo')
+
+class MessageSerializer(serializers.ModelSerializer):
+    """ message serializer
+    """
+    class Meta:
+        model = Message
+        fields = ('id', 'sender', 'email', 'company', 'phone', 'message')

@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import LandingAPI
+from .views import LandingAPI, MessageAPI
 
 
 urlpatterns = [
@@ -14,4 +14,8 @@ urlpatterns = [
     url(r'^projects/$', LandingAPI.as_view({
         'get': 'projects',
     }), name="projects"),
+
+    url(r'^message/$', MessageAPI.as_view({
+        'post': 'send',
+    }), name="messages"),
 ]

@@ -48,3 +48,16 @@ class Mockup(models.Model):
 
     def __str__(self):
         return "{}".format(self.name)
+
+
+class Message(models.Model):
+    """messages
+    """
+    sender = models.CharField(max_length=200)
+    email = models.EmailField(max_length=100)
+    company = models.CharField(max_length=200, null=True, blank=True)
+    phone = models.CharField(max_length=50)
+    message = models.TextField()
+
+    def __str__(self):
+        return "{}".format(self.sender)

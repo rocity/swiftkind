@@ -1,0 +1,110 @@
+<div class="right-sidebar" ng-controller="ContactController as ctrl">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="pull-right">
+                    <h3> <a href="javascript:;" class="close-contact"><i class="icon ion-close-round"></i></a></h3>
+                </div>
+                <div class="col-md-12 col-xs-12">
+                    <h6 class="title">CONTACT</h6>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <h2 class="contact-heading">Some great ideas start here!</h2>
+                    <p>Shoot us an e-mail at</p>
+                    <a href="#"><h2>Hello@swiftkind.com </h2></a>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <p>Headquarters</p>
+                    <h2>Davao City</h2>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5 class="section-sub-heading">Address</h5>
+                            <div class="address">
+                                <p>#730-A Molave Street, Juna Subdivision, Matina, Davao City, Philippines, 8000</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="section-sub-heading">Phone</h5>
+                            <div class="phone">
+                                <p>(082) 225 - 1050</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-success" ng-show="message_sent">
+              <strong>Success!</strong> Message successfully sent.
+            </div>
+            <div class="alert alert-danger" ng-show="message_failed">
+              <strong>Something went wrong!</strong> Message failed to sent.
+            </div>
+            <form name="messageForm" ng-submit="messageForm.$valid && ctrl.sendMessage(form)" novalidate>
+                <div class="row">
+                    <div class="col-md-6">
+                        <fieldset class="material">
+                            <input name="name" type="text" ng-model="form.sender" required>
+                            <hr>
+                            <label>Name
+                                <span class="error" 
+                                    ng-show="messageForm.$submitted && messageForm.name.$error.required" 
+                                    style="color:red">(required)</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset class="material">
+                            <input name="email" type="email" ng-model="form.email" required>
+                            <hr>
+                            <label>E-mail
+                                <span class="error" 
+                                    ng-show="messageForm.$submitted && messageForm.email.$error.required" 
+                                    style="color:red">(required)</span>
+                                <span class="error" 
+                                    ng-show="messageForm.$submitted && messageForm.email.$error.email" 
+                                    style="color:red">(invalid email)</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset class="material">
+                            <input type="text" ng-model="form.company">
+                            <hr>
+                            <label>Company (optional)</label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset class="material">
+                            <input name="phone" type="text" ng-minlength="10" ng-pattern="/^[0-9+(+)+-]*$/" ng-model="form.phone" required>
+                            <hr>
+                            <label>Phone
+                                <span class="error" 
+                                    ng-show="messageForm.$submitted && messageForm.phone.$error.required" 
+                                    style="color:red">(required)</span>
+                                <span class="error" 
+                                    ng-show="messageForm.$submitted && messageForm.phone.$error.pattern || 
+                                             messageForm.$submitted && messageForm.phone.$error.minlength" 
+                                    style="color:red">(invalid number)</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                        <fieldset class="material">
+                            <textarea name="message" ng-model="form.message" required></textarea>
+                            <hr>
+                            <label>Message
+                                <span class="error" 
+                                    ng-show="messageForm.$submitted && messageForm.message.$error.required" 
+                                    style="color:red">(required)</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="text-right send">
+                        <button class="btn"  type="submit">Send</button>
+                      </div>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
