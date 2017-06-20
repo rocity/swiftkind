@@ -2,12 +2,14 @@ from django.shortcuts import get_object_or_404
 
 from rest_framework import viewsets
 from rest_framework.response import Response
+from rest_framework.parsers import FormParser, MultiPartParser
 
 from .serializers import (
     HeaderSerializer,
     StackSerializer,
     ProjectSerializer,
-    MessageSerializer
+    MessageSerializer,
+    ApplicantCVSerializer
 )
 
 from .mixins import ContactUsMixin
@@ -39,5 +41,18 @@ class MessageAPI(ContactUsMixin, viewsets.ViewSet):
         if serializer.is_valid():
             data = serializer.save()
             self.send_message(data)
+            return Response(serializer.data, status=200)
+        return Response(serializer.errors, status=400)
+
+
+class ApplicantCvAPI(viewsets.ViewSet):
+    """ upload applicant cv
+    """
+    parser_classes = (FormParser, MultiPartParser)
+
+    def upload_cv(self, *args, **kwargs):
+        serializer = ApplicantCVSerializer(data=self.request.data)
+        if serializer.is_valid():
+            serializer.save()
             return Response(serializer.data, status=200)
         return Response(serializer.errors, status=400)
