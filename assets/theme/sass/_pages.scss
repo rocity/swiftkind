@@ -1,0 +1,122 @@
+.job-post {
+    display: flex;
+    min-height: 50vh;
+    align-items: center;
+    .section-heading{
+    	color: $primary-green;
+    	font-family: $Raleway-SemiBold;
+    }
+    h4{
+    	color: $white;
+    	font-family: $Raleway-Light;
+    	line-height: 1.4;
+    }
+    h3{
+    	text-align: left;
+    	color: $white;
+    	font-family: $Raleway-SemiBold;
+    }
+    .requirements{
+    	ul{
+    		list-style: square;
+    		color: $white;
+    		li{
+    			p{
+    				color:$white;
+    				font-family: $OpenSans-Light;
+    				font-size: 18px;
+    			}
+    		}
+    	}
+    }
+}
+
+.big-text-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .text {
+        font-family: $OpenSans-ExtraBold;
+        font-size: 230.2px;
+        font-weight: 800;
+        letter-spacing: -9.6px;
+        text-align: left;
+        color: #111318;
+        line-height: 1;
+        position: absolute;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.caption {
+    display: flex;
+    align-items: center;
+    position: relative;
+    p {
+        font-family: $OpenSans-Light;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.75;
+        text-align: left;
+        color: #ffffff;
+        z-index: 2;
+        position: relative;
+    }
+}
+
+.gallery {
+    height: auto;
+    width: 100%;
+    display: flex;
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            width: 20%;
+            float: right;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+//ui bootstrap
+.careers {
+    .panel-group {
+        .panel {
+            &.panel-default {
+                border: none;
+                .panel-heading {
+                    border: none;
+                }
+            }
+            background-color: transparent;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            .panel-heading {
+                background-color: transparent;
+                .accordion-toggle {
+                    &:focus{
+                        text-decoration: none;
+                    }
+                    span {
+                        width: 286px;
+                        height: 29px;
+                        font-size: 30px;
+                        font-weight: bold;
+                        text-align: left;
+                        color: #ffffff;
+                        font-family: $Raleway-SemiBold;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@
         </div>
         <!-- <span class="menu">MENU</span> <span class="logo"></span></a> -->
       </a>
-      <a href="#home" class="text-logo" >Swiftkind</a>
+      <a href="" ng-click="goTo('home')" class="text-logo" >Swiftkind</a>
         <div class="pull-right">
           <a class="contact-trigger" ng-click="ctrl.triggerContact()">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="276.667px" height="179.999px" viewBox="0 0 276.667 179.999" enable-background="new 0 0 276.667 179.999" xml:space="preserve">
@@ -45,11 +45,12 @@
           
     <div class="nav-links slideInDown " ng-class="{'open':ctrl.menuOpen}">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#team">Team</a></li>
+        <li><a href="" ng-click="goTo('about')">About</a></li>
+        <li><a href="" ng-click="goTo('technologies')">Technologies</a></li>
+        <li><a href="" ng-click="goTo('team')">Team</a></li>
         <li><a href="http://blog.swiftkind.com/" target="_blank">Blogs</a></li>
-        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="" ng-click="goTo('projects')">Portfolio</a></li>
+        <li><a ui-sref="careers">Careers</a></li>
       </ul>
     </div>
     <div class="navbar-right pull-right"></div>

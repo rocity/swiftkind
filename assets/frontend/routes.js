@@ -10,9 +10,9 @@
    * @desc : swiftkind routes
    */
   function routes ($urlMatcherFactoryProvider, $stateProvider, $locationProvider, $urlRouterProvider, TEMPLATE_URL) {
+    $locationProvider.hashPrefix('');
     $urlRouterProvider.otherwise('/');
     $urlMatcherFactoryProvider.strictMode(false);
-
     $stateProvider
       .state('legacy', {
         abstract : true,
@@ -25,9 +25,13 @@
         controller   : 'LandingController',
         controllerAs : 'ctrl'
       })
+      .state('careers', {
+        url          : '/careers/',
+        templateUrl  : TEMPLATE_URL + 'careers.html',
+        controller   : 'CareersController',
+        controllerAs : 'ctrl'
+      })
     ;
-
-    $locationProvider.html5Mode(true);
   };
 
 })();
