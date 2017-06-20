@@ -5,7 +5,11 @@
     .module('swiftkind', [
       'ui.router',
       'ngAnimate',
+      'ngSanitize',
+      'ui.bootstrap',
+      'ngFileUpload',
     ])
+    .config(csrf)
     .constant('TEMPLATE_URL', "/static/frontend/templates/")
   ;
 

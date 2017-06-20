@@ -61,3 +61,14 @@ class Message(models.Model):
 
     def __str__(self):
         return "{}".format(self.sender)
+
+
+class Applicant(models.Model):
+    """ applicant upload cv
+    """
+    cv = models.FileField(upload_to='cv/%Y/%m/%d')
+    upload_date = models.DateTimeField(auto_now_add=True) 
+
+    def __str__(self):
+        return "{}".format(self.cv)
+

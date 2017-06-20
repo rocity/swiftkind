@@ -10,13 +10,14 @@
   /* LANDING PAGE SERVICES
    * @desc : services for landing page
    */
-  function LandingService ($http, API_URL) {
+  function LandingService ($http, API_URL, Upload) {
 
     var services = {
       headers  : [],
       stacks   : [],
       projects : [],
-      inquire  : sendMessage
+      inquire  : sendMessage,
+      uploadCV : uploadCV
     };
 
     getHeaders();
@@ -45,6 +46,14 @@
 
     function sendMessage (form) {
       return $http.post(API_URL + 'message/', form);
+    };
+
+    function uploadCV(form) {
+      return Upload.upload({
+            url: API_URL + 'upload/cv/',
+            data: form,
+            method: 'POST'
+      });
     };
 
   };

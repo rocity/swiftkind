@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import LandingAPI, MessageAPI
+from .views import LandingAPI, MessageAPI, ApplicantCvAPI
 
 
 urlpatterns = [
@@ -18,4 +18,8 @@ urlpatterns = [
     url(r'^message/$', MessageAPI.as_view({
         'post': 'send',
     }), name="messages"),
+
+    url(r'^upload/cv/$', ApplicantCvAPI.as_view({
+        'post': 'upload_cv',
+    }), name="upload_cv")
 ]

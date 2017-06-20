@@ -1,5 +1,76 @@
 <div class="careers">
     <div class="container">
+        <div class="job-post"> 
+            <div class="row flex ">
+                <div class="col-md-8 col-xs-10 col-xs-offset-1 col-sm-9">
+                    <div class="">
+                        <h2 class="section-heading wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.5s">We are looking for talents!</h2>
+                        <h4>We know you are born with talent and grit and have invested in your dreams. Start here. Go above and beyond! Shall we?</h4>
+                        
+                        <style>
+                          .horizontal-collapse {
+                            height: 70px;
+                          }
+                          .navbar-collapse.in {
+                            overflow-y: hidden;
+                          }
+                        </style>
+                        <div>
+
+                        <uib-accordion close-others="ctrl.oneAtATime">
+                            <div uib-accordion-group class="panel-default" is-open="isCustomHeaderOpen">
+                                <uib-accordion-heading>
+                                    Software Developer <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isCustomHeaderOpen, 'glyphicon-chevron-right': !isCustomHeaderOpen}"></i>
+                                </uib-accordion-heading>
+                              <div class="requirements">
+                                <ul>
+                                    <li>
+                                        <p>HTML, CSS, JQUERY</p>
+                                    </li>
+                                    <li>
+                                        <p>Good to have experience Angularjs, ES6, Typscript,  Coffeescript</p>
+                                    </li>
+                                    <li>
+                                        <p>Python and Django</p>
+                                    </li>
+                                    <li>
+                                        <p>Ubuntu</p>
+                                    </li>
+                                    <li>
+                                        <p>Git</p>
+                                    </li>
+                                </ul>
+                             </div>
+                            </div>
+                        </uib-accordion>
+
+                        </div>
+
+
+                        <h4 ng-show="uploadSuccess">your file has been successfully uploaded</h4>
+                        <img ng-show="uploading" src="static/theme/images/upload.gif">
+                        <form name="uploadCV" ng-submit="uploadCv(form)" novalidate>
+                                <div class="upload">
+                                    <input type="file" ngf-select 
+                                        ng-model="form.cv"
+                                        name="cv"
+                                        ngf-pattern="'.docx,.pdf'" 
+                                        accept=".docx,.pdf"
+                                        ngf-drop="" 
+                                        ngf-max-size="10MB"
+                                        ng-change="change=true"
+                                    >
+                                </div>
+                                <div ng-if="change">
+                                    <button type="submit" class="btn btn-default btn-sm">Upload</button>
+                                    <button type="button" class="btn btn-default btn-sm" ng-if="change" ng-click="cancelUpload()">Cancel</button> 
+                                </div>
+                        </form> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="section-about section " id="about">
             <div class="row flex ">
                 <div class="col-md-8 col-xs-10 col-xs-offset-1 col-sm-9">
@@ -14,16 +85,67 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="section-content">
+        <div class="section big-text-section">
             <div class="bg-text">
-                <p class="text">
+                <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
                     Solid team
                     <br/>Collaboration
                 </p>
             </div>
-            <div class="row">
+            <div class="row flex">
                 <div class="col-md-offset-3 col-md-6">
-                    <p class="caption">Everyday at swiftkind, solid team effort and collaboration is highly valued. We celebrate open-mindedness and wide perspective of each individual in the team.</p>
+                    <div class="caption">
+                        <p>Everyday at swiftkind, solid team effort and collaboration is highly valued. We celebrate open-mindedness and wide perspective of each individual in the team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <ul>
+                <li>
+                    <img src="static/theme/images/careers/pic1.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic2.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic3.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic14.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic25.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic6.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic7.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic8.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic9.jpg">
+                </li>
+                <li>
+                    <img src="static/theme/images/careers/pic10.jpg">
+                </li>
+            </ul>
+        </div>
+        <div class="section big-text-section">
+            <div class="bg-text">
+                <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                    Solid team
+                    <br/>Collaboration
+                </p>
+            </div>
+            <div class="row flex">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="caption">
+                        <p>Everyday at swiftkind, solid team effort and collaboration is highly valued. We celebrate open-mindedness and wide perspective of each individual in the team.</p>
+                    </div>
                 </div>
             </div>
         </div>

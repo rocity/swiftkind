@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Header, Stack, Project, Mockup, Message
+from .models import Header, Stack, Project, Mockup, Message, Applicant
 
 
 class MockupAdmin(admin.ModelAdmin):
@@ -18,9 +18,8 @@ class ProjectAdmin(admin.ModelAdmin):
 class HeaderAdmin(admin.ModelAdmin):
 	model = Header
 
-
-
 admin.site.register(Mockup, MockupAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(Header, HeaderAdmin)
 admin.site.register(Message)
+admin.site.register(Applicant)
