@@ -1,5 +1,6 @@
 appdirs==1.4.3
 Django==1.10
+django-richtextfield==1.1
 djangorestframework==3.6.2
 olefile==0.44
 packaging==16.8
