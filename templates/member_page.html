@@ -11,13 +11,6 @@
   <meta name="description" content="Swiftkind is an in-house Python development company primarily using Python, Django and Angular JS. Located in Davao City, Philippines." />
   <meta name="author" content="Resty Antiquin" />
 
-  <base href="/">
-
-  <link rel="stylesheet" type="text/css" href="{% static 'theme/css/ionicons.min.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/owl-carousel/css/owl.carousel.min.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/owl-carousel/css/owl.theme.default.min.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/animate/css/animate.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'theme/dist/hover/css/hover.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'theme/css/bootstrap.css' %}">  
 
   <!-- Custom styles for members page only, extended from main styles with additional element style changes. -->
@@ -27,14 +20,19 @@
 <body>
   <div id="page-wrapper">
     <div class="content-wrapper">
-      <div class="container">
-        <h1>Hello</h1>
+      <img id="company-logo" src="{% static 'theme/images/logo.svg' %}">
+      <div class="container member-content">
+        {{ member_page.content|safe }}
       </div>
     </div>
   </div>
+
+  <footer>
+    <div class="text-center">
+        <p> &copy; Swiftkind (2017)</p>
+    </div>
+  </footer>
   
   <script type="text/javascript" src="{% static 'theme/js/jquery-2.1.4.js' %}"></script>
-  <script type="text/javascript" src="{% static 'theme/dist/owl-carousel/js/owl.carousel.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'theme/dist/wow/js/wow.min.js' %}"></script>
 </body>
 </html>

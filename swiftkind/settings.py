@@ -166,7 +166,8 @@ DJRICHTEXTFIELD_CONFIG = {
     'settings': {
         'plugins': 'link image',
         'toolbar': 'bold italic | link image | removeformat',
-        'width': 700,
+        'width': 1200,
+        'height': 500,
         'plugins': 'advlist autolink lists link image charmap print preview hr anchor pagebreak emoticons',
         'toolbar1': 'undo redo | insert | styleselect | bold italic',
         'toolbar2': 'alignleft aligncenter alignright alignjustify | link image emoticons',
