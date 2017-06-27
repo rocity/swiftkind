@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'djrichtextfield',
 
     'landing',
+    'members',
 ]
 
 MIDDLEWARE = [
@@ -157,3 +159,18 @@ try:
     from .local_settings import *
 except Exception as e:
     pass
+
+DJRICHTEXTFIELD_CONFIG = {
+    'js': ['//tinymce.cachefly.net/4.1/tinymce.min.js'],
+    'init_template': 'djrichtextfield/init/tinymce.js',
+    'settings': {
+        'plugins': 'link image',
+        'toolbar': 'bold italic | link image | removeformat',
+        'width': 1200,
+        'height': 500,
+        'plugins': 'advlist autolink lists link image charmap print preview hr anchor pagebreak emoticons',
+        'toolbar1': 'undo redo | insert | styleselect | bold italic',
+        'toolbar2': 'alignleft aligncenter alignright alignjustify | link image emoticons',
+        'image_advtab': True,
+    }
+}

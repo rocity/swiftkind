@@ -1,0 +1,38 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Application Development Services - Python, Django, Angular JS, API | Swiftkind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'theme/favicon.png' %}">
+  <meta name="description" content="Swiftkind is an in-house Python development company primarily using Python, Django and Angular JS. Located in Davao City, Philippines." />
+  <meta name="author" content="Resty Antiquin" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/css/bootstrap.css' %}">  
+
+  <!-- Custom styles for members page only, extended from main styles with additional element style changes. -->
+  <link rel="stylesheet" type="text/css" href="{% static 'theme/css/member.css' %}">
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <div class="content-wrapper">
+      <img id="company-logo" src="{% static 'theme/images/logo.svg' %}">
+      <div class="container member-content">
+        {{ member_page.content|safe }}
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="text-center">
+        <p> &copy; Swiftkind (2017)</p>
+    </div>
+  </footer>
+  
+  <script type="text/javascript" src="{% static 'theme/js/jquery-2.1.4.js' %}"></script>
+</body>
+</html>
