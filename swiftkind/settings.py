@@ -168,9 +168,9 @@ DJRICHTEXTFIELD_CONFIG = {
         'toolbar': 'bold italic | link image | removeformat',
         'width': 1200,
         'height': 500,
-        'plugins': 'advlist autolink lists link image charmap print preview hr anchor pagebreak emoticons',
+        'plugins': 'advlist autolink lists link image charmap print preview hr anchor pagebreak emoticons code',
         'toolbar1': 'undo redo | insert | styleselect | bold italic',
-        'toolbar2': 'alignleft aligncenter alignright alignjustify | link image emoticons',
+        'toolbar2': 'alignleft aligncenter alignright alignjustify | link image emoticons code',
         'image_advtab': True,
     }
 }
